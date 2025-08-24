@@ -1,182 +1,170 @@
-// FILE: index.html
-<!doctype html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>THINK TWICE — Official Link Hub</title>
-  <meta name="description" content="Florida metalcore. New singles out now. Stream Think Twice on Spotify, Apple Music, and more." />
-  <link rel="canonical" href="https://thinktwice.verdantmission.org/" />
-
-  <!-- Icons -->
-  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/assets/logo.svg" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="THINK TWICE — Official Link Hub" />
-  <meta property="og:description" content="Florida metalcore. New singles out now." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://thinktwice.verdantmission.org/" />
-  <meta property="og:image" content="https://thinktwice.verdantmission.org/assets/logo.svg" />
-  <meta property="og:image:type" content="image/svg+xml" />
-  <meta property="og:site_name" content="THINK TWICE" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="THINK TWICE — Official Link Hub" />
-  <meta name="twitter:description" content="Florida metalcore. New singles out now." />
-  <meta name="twitter:image" content="https://thinktwice.verdantmission.org/assets/logo.svg" />
-
-  <!-- Theming & color-scheme -->
-  <meta name="theme-color" content="#0b0b0f" />
-  <meta name="color-scheme" content="dark light" />
-
-  <!-- Critical inline to minimize CLS -->
-  <style>
-    :root { --bg-a:#0b0b0f; --bg-b:#111827; --text:#f3f4f6; }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      line-height: 1.5;
-      background: radial-gradient(1200px 800px at 50% -10%, #1f2937 0%, var(--bg-b) 35%, var(--bg-a) 100%), linear-gradient(180deg, #0b0b0f 0%, #0b0b0f 100%);
-      color: var(--text);
-      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-    }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 28px) 96px; }
-    header { display: grid; place-items: center; margin: 12px 0 20px; }
-    header img { width: clamp(180px, 40vw, 360px); height: auto; }
-    .hook { text-align: center; margin: 8px 0 24px; font-size: clamp(1rem, 1.2rem + .5vw, 1.25rem); color: #d1d5db; }
-    .list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
-    .section-title { margin: 28px 0 12px; font-weight: 700; font-size: clamp(.9rem, .8rem + .3vw, 1.05rem); letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; }
-    .embed { margin-top: 20px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); backdrop-filter: blur(6px); }
-    .embed iframe { display: block; width: 100%; aspect-ratio: 16/9; border: 0; }
-    footer { position: sticky; bottom: 0; padding: 12px clamp(16px, 4vw, 28px); background: linear-gradient(180deg, transparent, rgba(0,0,0,.35)); backdrop-filter: blur(6px); border-top: 1px solid rgba(255,255,255,.06); font-size: .9rem; color: #9ca3af; }
-  </style>
-
-  <!-- Defer full styles -->
-  <link rel="preload" href="/styles.css" as="style" />
-  <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="/styles.css" /></noscript>
-</head>
-<body>
-  <a class="skip-link" href="#links">Skip to links</a>
-
-  <div class="wrap">
-    <header role="banner" aria-labelledby="site-title">
-      <img src="/assets/logo.svg" width="600" height="128" alt="THINK TWICE wordmark" />
-      <h1 id="site-title" class="visually-hidden">THINK TWICE — Official Link Hub</h1>
-      <p class="hook">Florida metalcore. <strong>New singles out now.</strong></p>
-    </header>
-
-    <main id="main" role="main">
-      <nav aria-label="Featured releases">
-        <h2 class="section-title">Featured releases</h2>
-        <ul id="featured" class="list" aria-live="polite"></ul>
-      </nav>
-
-      <section class="embed" aria-label="Spotify artist embed">
-        <iframe
-          title="Spotify — Think Twice (Artist)"
-          loading="lazy"
-          src="https://open.spotify.com/embed/artist/0U2ZIIYIMFChatxKoQJdTU"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
-      </section>
-
-      <nav aria-label="Streaming and socials">
-        <h2 class="section-title">Streaming / socials</h2>
-        <ul id="links" class="list" aria-live="polite"></ul>
-      </nav>
-
-      <aside id="press" aria-label="Press & mentions" hidden>
-        <h2 class="section-title">As seen on</h2>
-        <ul id="pressList" class="list"></ul>
-      </aside>
-    </main>
-  </div>
-
-  <footer role="contentinfo">
-    <span>© <span id="year">2025</span> THINK TWICE</span>
-    <span aria-hidden="true"> • </span>
-    <a href="https://verdantmission.org" target="_blank" rel="noopener noreferrer">Verdantmission.org</a>
-  </footer>
-
-  <!-- Data-driven buttons -->
-  <script type="module">
-    const $ = (sel) => document.querySelector(sel);
-    const featuredEl = $("#featured");
-    const linksEl = $("#links");
-    const pressEl = $("#press");
-    const pressListEl = $("#pressList");
-    $("#year").textContent = new Date().getFullYear();
-
-    const ICONS = {
-      link: `<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M10.59 13.41a1 1 0 0 0 1.41 1.41l5-5a3 3 0 1 0-4.24-4.24l-2 2a1 1 0 1 0 1.41 1.41l2-2a1 1 0 1 1 1.42 1.42l-5 5Zm2.82-2.82a1 1 0 0 0-1.41-1.41l-5 5a3 3 0 1 0 4.24 4.24l2-2a1 1 0 1 0-1.41-1.41l-2 2a1 1 0 1 1-1.42-1.42l5-5Z" fill="currentColor"/></svg>`,
-      spotify: `<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M12 1.5A10.5 10.5 0 1 0 22.5 12 10.5 10.5 0 0 0 12 1.5Zm4.77 14.88a.94.94 0 0 1-1.3.32 12.53 12.53 0 0 0-7.7-1.57.94.94 0 0 1-.25-1.87 14.42 14.42 0 0 1 8.84 1.79.94.94 0 0 1 .41 1.33Zm1.54-3.13a1.18 1.18 0 0 1-1.64.4 15.46 15.46 0 0 0-9.48-1.91 1.18 1.18 0 0 1-.42-2.33 17.64 17.64 0 0 1 10.83 2.19 1.18 1.18 0 0 1 .71 1.65Zm.17-3.29a1.4 1.4 0 0 1-1.95.47 18.68 18.68 0 0 0-11.45-2.3 1.41 1.41 0 0 1-.48-2.77 21.13 21.13 0 0 1 12.94 2.6 1.4 1.4 0 0 1 .94 2Z" fill="currentColor"/></svg>`,
-      apple: `<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M17.41 13.13a4.9 4.9 0 0 1 2.32 4.15c0 3-2.53 6.72-5.58 6.72-1.31 0-1.86-.83-3.22-.83-1.39 0-2 .81-3.25.81C4.91 24 2 20.61 2 16.44c0-2.53 1.65-5.5 4.29-5.5 1.35 0 2.37.86 3.21.86.8 0 2.2-.9 3.84-.9a4.33 4.33 0 0 1 4.07 2.23Zm-3.8-7.43c.7-.86 1.25-2.08 1.05-3.3-1.11.05-2.41.74-3.18 1.6-.69.77-1.28 2-1.06 3.18 1.2.09 2.45-.61 3.19-1.48Z" fill="currentColor"/></svg>`,
-      instagram: `<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5Zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5Zm5-2.75a1 1 0 1 1-1 1 1 1 0 0 1 1-1Z" fill="currentColor"/></svg>`,
-      tiktok: `<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M16.5 2a6.46 6.46 0 0 0 .23 1.73 5.49 5.49 0 0 0 3.54 3.56A9.22 9.22 0 0 0 21 7.5v3.05a8.1 8.1 0 0 1-4.5-1.4v6.5A6.35 6.35 0 1 1 10 9.48v3.24a3.2 3.2 0 1 0 2.5 3.11V2.02h4Z" fill="currentColor"/></svg>`,
-      youtube: `<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M23.5 7.5a4 4 0 0 0-2.8-2.83C18.92 4 12 4 12 4s-6.92 0-8.7.67A4 4 0 0 0 .5 7.5 41.9 41.9 0 0 0 0 12a41.9 41.9 0 0 0 .5 4.5 4 4 0 0 0 2.8 2.83C5.08 20 12 20 12 20s6.92 0 8.7-.67a4 4 0 0 0 2.8-2.83A41.9 41.9 0 0 0 24 12a41.9 41.9 0 0 0-.5-4.5ZM9.75 15.02V8.98L15.5 12l-5.75 3.02Z" fill="currentColor"/></svg>`,
-      reddit: `<svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" focusable="false"><path d="M20.5 12.5a2 2 0 0 0-3.42-1.4 8.2 8.2 0 0 0-4.58-1.35l.7-3.29 2.87.61a2 2 0 1 0 .22-1.01l-3.54-.76a.75.75 0 0 0-.88.57l-.9 4.21a8.2 8.2 0 0 0-4.57 1.34 2 2 0 1 0-2.19 3.22 4.9 4.9 0 0 0-.04.64c0 3.18 3.59 5.76 8.01 5.76s8.01-2.58 8.01-5.76a4.9 4.9 0 0 0-.04-.64 2 2 0 0 0 1.35-1.94ZM8.75 13a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Zm6.5 0a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 19.25c-1.77 0-3.3-.6-4.17-1.52a.5.5 0 0 1 .73-.69c.65.69 1.92 1.21 3.44 1.21s2.79-.52 3.44-1.21a.5.5 0 0 1 .73.69c-.87.92-2.4 1.52-4.17 1.52Z" fill="currentColor"/></svg>`
-    };
-
-    function createButton({ title, href, source, icon }) {
-      const a = document.createElement('a');
-      a.className = 'btn';
-      a.href = href;
-      a.target = "_blank";
-      a.rel = "noopener noreferrer";
-      a.setAttribute('role', 'button');
-      a.setAttribute('aria-label', `${title} — ${source}`);
-      a.innerHTML = `
-        <span class="btn-icon" aria-hidden="true">${ICONS[icon] || ICONS.link}</span>
-        <span class="btn-text">
-          <span class="btn-title">${title}</span>
-          <span class="btn-meta">${source}</span>
-        </span>`;
-      return a;
-    }
-
-    function renderList(container, items) {
-      const frag = document.createDocumentFragment();
-      items.forEach(item => {
-        const li = document.createElement('li');
-        li.appendChild(createButton(item));
-        frag.appendChild(li);
-      });
-      container.textContent = "";
-      container.appendChild(frag);
-    }
-
-    try {
-      const res = await fetch('/links.json', { cache: 'no-store' });
-      const data = await res.json();
-
-      if (Array.isArray(data.featured)) renderList(featuredEl, data.featured);
-      if (Array.isArray(data.socials)) renderList(linksEl, data.socials.filter(x => !x.optional));
-      const press = (data.socials || []).filter(x => x.optional);
-      if (press.length) {
-        renderList(pressListEl, press);
-        pressEl.hidden = false;
-      }
-    } catch (e) {
-      // Minimal fallback if links.json fails
-      featuredEl.innerHTML = `
-        <li><a class="btn" href="https://found.ee/RECOVERY1" target="_blank" rel="noopener" aria-label="RECOVERY — Stream — found.ee">${ICONS.link}<span class="btn-text"><span class="btn-title">RECOVERY — Stream</span><span class="btn-meta">found.ee</span></span></a></li>
-        <li><a class="btn" href="https://found.ee/time-10" target="_blank" rel="noopener" aria-label="TIME — Stream — found.ee">${ICONS.link}<span class="btn-text"><span class="btn-title">TIME — Stream</span><span class="btn-meta">found.ee</span></span></a></li>
-      `;
-      linksEl.innerHTML = `
-        <li><a class="btn" href="https://open.spotify.com/artist/0U2ZIIYIMFChatxKoQJdTU" target="_blank" rel="noopener" aria-label="Spotify (Artist) — Spotify">${ICONS.spotify}<span class="btn-text"><span class="btn-title">Spotify (Artist)</span><span class="btn-meta">Spotify</span></span></a></li>
-        <li><a class="btn" href="https://music.apple.com/us/album/recovery-single/1824116381" target="_blank" rel="noopener" aria-label="Apple Music — RECOVERY — Apple Music">${ICONS.apple}<span class="btn-text"><span class="btn-title">Apple Music — RECOVERY</span><span class="btn-meta">Apple Music - Web Player</span></span></a></li>
-        <li><a class="btn" href="https://music.apple.com/us/song/time/1788721331" target="_blank" rel="noopener" aria-label="Apple Music — Time — Apple Music">${ICONS.apple}<span class="btn-text"><span class="btn-title">Apple Music — Time</span><span class="btn-meta">Apple Music - Web Player</span></span></a></li>
-        <li><a class="btn" href="https://instagram.com/thinktwicefl" target="_blank" rel="noopener" aria-label="Instagram — Instagram">${ICONS.instagram}<span class="btn-text"><span class="btn-title">Instagram</span><span class="btn-meta">Instagram</span></span></a></li>
-        <li><a class="btn" href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener" aria-label="TikTok — TikTok">${ICONS.tiktok}<span class="btn-text"><span class="btn-title">TikTok</span><span class="btn-meta">TikTok</span></span></a></li>
-        <li><a class="btn" href="https://youtube.com/@thinktwicefl" target="_blank" rel="noopener" aria-label="YouTube — YouTube">${ICONS.youtube}<span class="btn-text"><span class="btn-title">YouTube</span><span class="btn-meta">YouTube</span></span></a></li>
-      `;
-    }
-  </script>
-</body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 0a7863d8a0643b1cb2e08eada758cab53e4f59e7..e82adbac2ccea212439f509286230b686e56a753 100644
+--- a/index.html
++++ b/index.html
+@@ -1,113 +1,104 @@
+ // FILE: index.html
+ <!doctype html>
+ <html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8" />
+   <meta http-equiv="x-ua-compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+   <title>THINK TWICE — Official Link Hub</title>
+-  <meta name="description" content="Florida metalcore. New singles out now. Stream Think Twice on Spotify, Apple Music, and more." />
++  <meta name="description" content="Florida metal core. New singles out now." />
+   <link rel="canonical" href="https://thinktwice.verdantmission.org/" />
+ 
+   <!-- Icons -->
+   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+   <link rel="apple-touch-icon" href="/assets/logo.svg" />
+ 
+   <!-- Open Graph -->
+   <meta property="og:title" content="THINK TWICE — Official Link Hub" />
+-  <meta property="og:description" content="Florida metalcore. New singles out now." />
++  <meta property="og:description" content="Florida metal core. New singles out now." />
+   <meta property="og:type" content="website" />
+   <meta property="og:url" content="https://thinktwice.verdantmission.org/" />
+   <meta property="og:image" content="https://thinktwice.verdantmission.org/assets/logo.svg" />
+   <meta property="og:image:type" content="image/svg+xml" />
+   <meta property="og:site_name" content="THINK TWICE" />
+ 
+   <!-- Twitter -->
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:title" content="THINK TWICE — Official Link Hub" />
+-  <meta name="twitter:description" content="Florida metalcore. New singles out now." />
++  <meta name="twitter:description" content="Florida metal core. New singles out now." />
+   <meta name="twitter:image" content="https://thinktwice.verdantmission.org/assets/logo.svg" />
+ 
+   <!-- Theming & color-scheme -->
+   <meta name="theme-color" content="#0b0b0f" />
+   <meta name="color-scheme" content="dark light" />
+ 
+   <!-- Critical inline to minimize CLS -->
+   <style>
+     :root { --bg-a:#0b0b0f; --bg-b:#111827; --text:#f3f4f6; }
+     * { box-sizing: border-box; }
+     html, body { height: 100%; }
+     body {
+       margin: 0;
+       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+       line-height: 1.5;
+       background: radial-gradient(1200px 800px at 50% -10%, #1f2937 0%, var(--bg-b) 35%, var(--bg-a) 100%), linear-gradient(180deg, #0b0b0f 0%, #0b0b0f 100%);
+       color: var(--text);
+       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+     }
+     .wrap { max-width: 720px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 28px) 96px; }
+     header { display: grid; place-items: center; margin: 12px 0 20px; }
+     header img { width: clamp(180px, 40vw, 360px); height: auto; }
+     .hook { text-align: center; margin: 8px 0 24px; font-size: clamp(1rem, 1.2rem + .5vw, 1.25rem); color: #d1d5db; }
+     .list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
+     .section-title { margin: 28px 0 12px; font-weight: 700; font-size: clamp(.9rem, .8rem + .3vw, 1.05rem); letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; }
+     .embed { margin-top: 20px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); backdrop-filter: blur(6px); }
+     .embed iframe { display: block; width: 100%; aspect-ratio: 16/9; border: 0; }
+     footer { position: sticky; bottom: 0; padding: 12px clamp(16px, 4vw, 28px); background: linear-gradient(180deg, transparent, rgba(0,0,0,.35)); backdrop-filter: blur(6px); border-top: 1px solid rgba(255,255,255,.06); font-size: .9rem; color: #9ca3af; }
+   </style>
+ 
+   <!-- Defer full styles -->
+   <link rel="preload" href="/styles.css" as="style" />
+   <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'" />
+   <noscript><link rel="stylesheet" href="/styles.css" /></noscript>
+ </head>
+ <body>
+   <a class="skip-link" href="#links">Skip to links</a>
+ 
+   <div class="wrap">
+     <header role="banner" aria-labelledby="site-title">
+       <img src="/assets/logo.svg" width="600" height="128" alt="THINK TWICE wordmark" />
+       <h1 id="site-title" class="visually-hidden">THINK TWICE — Official Link Hub</h1>
+-      <p class="hook">Florida metalcore. <strong>New singles out now.</strong></p>
++      <p class="hook">Florida metal core. <strong>New singles out now.</strong></p>
+     </header>
+ 
+     <main id="main" role="main">
+       <nav aria-label="Featured releases">
+         <h2 class="section-title">Featured releases</h2>
+         <ul id="featured" class="list" aria-live="polite"></ul>
+       </nav>
+ 
+-      <section class="embed" aria-label="Spotify artist embed">
+-        <iframe
+-          title="Spotify — Think Twice (Artist)"
+-          loading="lazy"
+-          src="https://open.spotify.com/embed/artist/0U2ZIIYIMFChatxKoQJdTU"
+-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+-        </iframe>
+-      </section>
+-
+       <nav aria-label="Streaming and socials">
+         <h2 class="section-title">Streaming / socials</h2>
+         <ul id="links" class="list" aria-live="polite"></ul>
+       </nav>
+ 
+       <aside id="press" aria-label="Press & mentions" hidden>
+         <h2 class="section-title">As seen on</h2>
+         <ul id="pressList" class="list"></ul>
+       </aside>
+     </main>
+   </div>
+ 
+   <footer role="contentinfo">
+     <span>© <span id="year">2025</span> THINK TWICE</span>
+     <span aria-hidden="true"> • </span>
+     <a href="https://verdantmission.org" target="_blank" rel="noopener noreferrer">Verdantmission.org</a>
+   </footer>
+ 
+   <!-- Data-driven buttons -->
+   <script type="module">
+     const $ = (sel) => document.querySelector(sel);
+     const featuredEl = $("#featured");
+     const linksEl = $("#links");
+     const pressEl = $("#press");
+     const pressListEl = $("#pressList");
+diff --git a/index.html b/index.html
+index 0a7863d8a0643b1cb2e08eada758cab53e4f59e7..e82adbac2ccea212439f509286230b686e56a753 100644
+--- a/index.html
++++ b/index.html
+@@ -144,39 +135,34 @@
+       const frag = document.createDocumentFragment();
+       items.forEach(item => {
+         const li = document.createElement('li');
+         li.appendChild(createButton(item));
+         frag.appendChild(li);
+       });
+       container.textContent = "";
+       container.appendChild(frag);
+     }
+ 
+     try {
+       const res = await fetch('/links.json', { cache: 'no-store' });
+       const data = await res.json();
+ 
+       if (Array.isArray(data.featured)) renderList(featuredEl, data.featured);
+       if (Array.isArray(data.socials)) renderList(linksEl, data.socials.filter(x => !x.optional));
+       const press = (data.socials || []).filter(x => x.optional);
+       if (press.length) {
+         renderList(pressListEl, press);
+         pressEl.hidden = false;
+       }
+     } catch (e) {
+       // Minimal fallback if links.json fails
+       featuredEl.innerHTML = `
+         <li><a class="btn" href="https://found.ee/RECOVERY1" target="_blank" rel="noopener" aria-label="RECOVERY — Stream — found.ee">${ICONS.link}<span class="btn-text"><span class="btn-title">RECOVERY — Stream</span><span class="btn-meta">found.ee</span></span></a></li>
+-        <li><a class="btn" href="https://found.ee/time-10" target="_blank" rel="noopener" aria-label="TIME — Stream — found.ee">${ICONS.link}<span class="btn-text"><span class="btn-title">TIME — Stream</span><span class="btn-meta">found.ee</span></span></a></li>
+       `;
+       linksEl.innerHTML = `
+-        <li><a class="btn" href="https://open.spotify.com/artist/0U2ZIIYIMFChatxKoQJdTU" target="_blank" rel="noopener" aria-label="Spotify (Artist) — Spotify">${ICONS.spotify}<span class="btn-text"><span class="btn-title">Spotify (Artist)</span><span class="btn-meta">Spotify</span></span></a></li>
+-        <li><a class="btn" href="https://music.apple.com/us/album/recovery-single/1824116381" target="_blank" rel="noopener" aria-label="Apple Music — RECOVERY — Apple Music">${ICONS.apple}<span class="btn-text"><span class="btn-title">Apple Music — RECOVERY</span><span class="btn-meta">Apple Music - Web Player</span></span></a></li>
+-        <li><a class="btn" href="https://music.apple.com/us/song/time/1788721331" target="_blank" rel="noopener" aria-label="Apple Music — Time — Apple Music">${ICONS.apple}<span class="btn-text"><span class="btn-title">Apple Music — Time</span><span class="btn-meta">Apple Music - Web Player</span></span></a></li>
+         <li><a class="btn" href="https://instagram.com/thinktwicefl" target="_blank" rel="noopener" aria-label="Instagram — Instagram">${ICONS.instagram}<span class="btn-text"><span class="btn-title">Instagram</span><span class="btn-meta">Instagram</span></span></a></li>
+         <li><a class="btn" href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener" aria-label="TikTok — TikTok">${ICONS.tiktok}<span class="btn-text"><span class="btn-title">TikTok</span><span class="btn-meta">TikTok</span></span></a></li>
+-        <li><a class="btn" href="https://youtube.com/@thinktwicefl" target="_blank" rel="noopener" aria-label="YouTube — YouTube">${ICONS.youtube}<span class="btn-text"><span class="btn-title">YouTube</span><span class="btn-meta">YouTube</span></span></a></li>
+       `;
+     }
+   </script>
+ </body>
+ </html>
+ 
+EOF
+)
