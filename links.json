@@ -1,80 +1,63 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/links.json b/links.json
-index bc75bde3ce38d602bf69c5bb7b3bbda1efdf7bfc..ff86eb178114c338d68270ff170d63edd8833262 100644
---- a/links.json
-+++ b/links.json
-@@ -1,62 +1,32 @@
- // FILE: links.json
- {
--  "featured": [
--    {
--      "title": "RECOVERY — Stream",
--      "href": "https://found.ee/RECOVERY1",
--      "source": "found.ee",
--      "icon": "link"
--    },
--    {
--      "title": "TIME — Stream",
--      "href": "https://found.ee/time-10",
--      "source": "found.ee",
--      "icon": "link"
--    }
--  ],
--  "socials": [
--    {
--      "title": "Spotify (Artist)",
--      "href": "https://open.spotify.com/artist/0U2ZIIYIMFChatxKoQJdTU",
--      "source": "Spotify",
--      "icon": "spotify"
--    },
--    {
--      "title": "Apple Music — RECOVERY",
--      "href": "https://music.apple.com/us/album/recovery-single/1824116381",
--      "source": "Apple Music - Web Player",
--      "icon": "apple"
--    },
--    {
--      "title": "Apple Music — Time",
--      "href": "https://music.apple.com/us/song/time/1788721331",
--      "source": "Apple Music - Web Player",
--      "icon": "apple"
--    },
-+    "featured": [
-+      {
-+        "title": "RECOVERY — Stream",
-+        "href": "https://found.ee/RECOVERY1",
-+        "source": "found.ee",
-+        "icon": "link"
-+      }
-+    ],
-+    "socials": [
-     {
-       "title": "Instagram",
-       "href": "https://instagram.com/thinktwicefl",
-       "source": "Instagram",
-       "icon": "instagram"
-     },
-     {
-       "title": "TikTok",
-       "href": "https://www.tiktok.com/@thinktwicefl",
-       "source": "TikTok",
-       "icon": "tiktok"
-     },
--    {
--      "title": "YouTube",
--      "href": "https://youtube.com/@thinktwicefl",
--      "source": "YouTube",
--      "icon": "youtube"
--    },
-     {
-       "title": "Reddit post (press/promo link)",
-       "href": "https://www.reddit.com/r/Metalcore/comments/1j3h0k1/think_twice_time/",
-       "source": "Reddit",
-       "icon": "reddit",
-       "optional": true
-     }
-   ]
- }
- 
-EOF
-)
+// FILE: links.json
+{
+  "featured": [
+    {
+      "title": "RECOVERY — Stream",
+      "href": "https://found.ee/RECOVERY1",
+      "source": "found.ee",
+      "icon": "link"
+    },
+    {
+      "title": "TIME — Stream",
+      "href": "https://found.ee/time-10",
+      "source": "found.ee",
+      "icon": "link"
+    }
+  ],
+  "socials": [
+    {
+      "title": "Spotify (Artist)",
+      "href": "https://open.spotify.com/artist/0U2ZIIYIMFChatxKoQJdTU",
+      "source": "Spotify",
+      "icon": "spotify"
+    },
+    {
+      "title": "Apple Music — RECOVERY",
+      "href": "https://music.apple.com/us/album/recovery-single/1824116381",
+      "source": "Apple Music - Web Player",
+      "icon": "apple"
+    },
+    {
+      "title": "Apple Music — Time",
+      "href": "https://music.apple.com/us/song/time/1788721331",
+      "source": "Apple Music - Web Player",
+      "icon": "apple"
+    },
+    {
+      "title": "Instagram",
+      "href": "https://instagram.com/thinktwicefl",
+      "source": "Instagram",
+      "icon": "instagram"
+    },
+    {
+      "title": "TikTok",
+      "href": "https://www.tiktok.com/@thinktwicefl",
+      "source": "TikTok",
+      "icon": "tiktok"
+    },
+    {
+      "title": "YouTube",
+      "href": "https://youtube.com/@thinktwicefl",
+      "source": "YouTube",
+      "icon": "youtube"
+    },
+    {
+      "title": "Reddit post (press/promo link)",
+      "href": "https://www.reddit.com/r/Metalcore/comments/1j3h0k1/think_twice_time/",
+      "source": "Reddit",
+      "icon": "reddit",
+      "optional": true
+    }
+  ]
+}
+
