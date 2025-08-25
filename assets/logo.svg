@@ -1,16 +1,15 @@
-// FILE: /assets/logo.svg
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160" role="img" aria-labelledby="ttitle tdesc">
   <title id="ttitle">THINK TWICE wordmark</title>
   <desc id="tdesc">Bold condensed uppercase wordmark reading THINK TWICE.</desc>
   <defs>
     <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="1" stop-color="#06b6d4"/>
+      <stop offset="0" stop-color="#22d3ee" />
+      <stop offset="1" stop-color="#06b6d4" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="none"/>
+  <rect width="100%" height="100%" fill="none" />
   <g fill="url(#g)">
-    <path d="M40 40h20v30h20V40h20v80H80V90H60v30H40zM140 40h20v80h-20zM180 40h20v30l28-30h26l-34 35 36 45h-25l-26-33v33h-20zM280 40h20v28h24V40h20v80h-20V88h-24v32h-20zM380 40h62v18h-21v62h-20V58h-21z"/>
-    <path d="M470 40h20v30h20V40h20v80h-20V90h-20v30h-20zM570 40h20v80h-20zM610 40h20v30l28-30h26l-34 35 36 45h-25l-26-33v33h-20zM710 40h-62v18h21v62h20V58h21z"/>
+    <path d="M40 40h20v30h20V40h20v80H80V90H60v30H40zM140 40h20v80h-20zM180 40h20v30l28-30h26l-34 35 36 45h-25l-26-33v33h-20zM280 40h20v28h24V40h20v80h-20V88h-24v32h-20zM380 40h62v18h-21v62h-20V58h-21z" />
+    <path d="M470 40h20v30h20V40h20v80h-20V90h-20v30h-20zM570 40h20v80h-20zM610 40h20v30l28-30h26l-34 35 36 45h-25l-26-33v33h-20zM710 40h-62v18h21v62h20V58h21z" />
   </g>
 </svg>
