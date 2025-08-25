@@ -76,7 +76,8 @@ footer{
   * { animation: none !important; transition: none !important; }
 }
 
-/* Make tap targets comfy on mobile */
+/* Increase tap targets on small screens */
 @media (max-width: 420px){
   .btn { min-height: 54px; }
 }
+
