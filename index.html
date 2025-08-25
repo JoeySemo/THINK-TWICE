@@ -1,170 +1,159 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-index 0a7863d8a0643b1cb2e08eada758cab53e4f59e7..e82adbac2ccea212439f509286230b686e56a753 100644
---- a/index.html
-+++ b/index.html
-@@ -1,113 +1,104 @@
- // FILE: index.html
- <!doctype html>
- <html lang="en" dir="ltr">
- <head>
-   <meta charset="utf-8" />
-   <meta http-equiv="x-ua-compatible" content="IE=edge" />
-   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-   <title>THINK TWICE — Official Link Hub</title>
--  <meta name="description" content="Florida metalcore. New singles out now. Stream Think Twice on Spotify, Apple Music, and more." />
-+  <meta name="description" content="Florida metal core. New singles out now." />
-   <link rel="canonical" href="https://thinktwice.verdantmission.org/" />
- 
-   <!-- Icons -->
-   <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
-   <link rel="apple-touch-icon" href="/assets/logo.svg" />
- 
-   <!-- Open Graph -->
-   <meta property="og:title" content="THINK TWICE — Official Link Hub" />
--  <meta property="og:description" content="Florida metalcore. New singles out now." />
-+  <meta property="og:description" content="Florida metal core. New singles out now." />
-   <meta property="og:type" content="website" />
-   <meta property="og:url" content="https://thinktwice.verdantmission.org/" />
-   <meta property="og:image" content="https://thinktwice.verdantmission.org/assets/logo.svg" />
-   <meta property="og:image:type" content="image/svg+xml" />
-   <meta property="og:site_name" content="THINK TWICE" />
- 
-   <!-- Twitter -->
-   <meta name="twitter:card" content="summary_large_image" />
-   <meta name="twitter:title" content="THINK TWICE — Official Link Hub" />
--  <meta name="twitter:description" content="Florida metalcore. New singles out now." />
-+  <meta name="twitter:description" content="Florida metal core. New singles out now." />
-   <meta name="twitter:image" content="https://thinktwice.verdantmission.org/assets/logo.svg" />
- 
-   <!-- Theming & color-scheme -->
-   <meta name="theme-color" content="#0b0b0f" />
-   <meta name="color-scheme" content="dark light" />
- 
-   <!-- Critical inline to minimize CLS -->
-   <style>
-     :root { --bg-a:#0b0b0f; --bg-b:#111827; --text:#f3f4f6; }
-     * { box-sizing: border-box; }
-     html, body { height: 100%; }
-     body {
-       margin: 0;
-       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-       line-height: 1.5;
-       background: radial-gradient(1200px 800px at 50% -10%, #1f2937 0%, var(--bg-b) 35%, var(--bg-a) 100%), linear-gradient(180deg, #0b0b0f 0%, #0b0b0f 100%);
-       color: var(--text);
-       -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
-     }
-     .wrap { max-width: 720px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 28px) 96px; }
-     header { display: grid; place-items: center; margin: 12px 0 20px; }
-     header img { width: clamp(180px, 40vw, 360px); height: auto; }
-     .hook { text-align: center; margin: 8px 0 24px; font-size: clamp(1rem, 1.2rem + .5vw, 1.25rem); color: #d1d5db; }
-     .list { display: grid; gap: 12px; margin: 0; padding: 0; list-style: none; }
-     .section-title { margin: 28px 0 12px; font-weight: 700; font-size: clamp(.9rem, .8rem + .3vw, 1.05rem); letter-spacing: .06em; text-transform: uppercase; color: #9ca3af; }
-     .embed { margin-top: 20px; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.03); backdrop-filter: blur(6px); }
-     .embed iframe { display: block; width: 100%; aspect-ratio: 16/9; border: 0; }
-     footer { position: sticky; bottom: 0; padding: 12px clamp(16px, 4vw, 28px); background: linear-gradient(180deg, transparent, rgba(0,0,0,.35)); backdrop-filter: blur(6px); border-top: 1px solid rgba(255,255,255,.06); font-size: .9rem; color: #9ca3af; }
-   </style>
- 
-   <!-- Defer full styles -->
-   <link rel="preload" href="/styles.css" as="style" />
-   <link rel="stylesheet" href="/styles.css" media="print" onload="this.media='all'" />
-   <noscript><link rel="stylesheet" href="/styles.css" /></noscript>
- </head>
- <body>
-   <a class="skip-link" href="#links">Skip to links</a>
- 
-   <div class="wrap">
-     <header role="banner" aria-labelledby="site-title">
-       <img src="/assets/logo.svg" width="600" height="128" alt="THINK TWICE wordmark" />
-       <h1 id="site-title" class="visually-hidden">THINK TWICE — Official Link Hub</h1>
--      <p class="hook">Florida metalcore. <strong>New singles out now.</strong></p>
-+      <p class="hook">Florida metal core. <strong>New singles out now.</strong></p>
-     </header>
- 
-     <main id="main" role="main">
-       <nav aria-label="Featured releases">
-         <h2 class="section-title">Featured releases</h2>
-         <ul id="featured" class="list" aria-live="polite"></ul>
-       </nav>
- 
--      <section class="embed" aria-label="Spotify artist embed">
--        <iframe
--          title="Spotify — Think Twice (Artist)"
--          loading="lazy"
--          src="https://open.spotify.com/embed/artist/0U2ZIIYIMFChatxKoQJdTU"
--          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
--        </iframe>
--      </section>
--
-       <nav aria-label="Streaming and socials">
-         <h2 class="section-title">Streaming / socials</h2>
-         <ul id="links" class="list" aria-live="polite"></ul>
-       </nav>
- 
-       <aside id="press" aria-label="Press & mentions" hidden>
-         <h2 class="section-title">As seen on</h2>
-         <ul id="pressList" class="list"></ul>
-       </aside>
-     </main>
-   </div>
- 
-   <footer role="contentinfo">
-     <span>© <span id="year">2025</span> THINK TWICE</span>
-     <span aria-hidden="true"> • </span>
-     <a href="https://verdantmission.org" target="_blank" rel="noopener noreferrer">Verdantmission.org</a>
-   </footer>
- 
-   <!-- Data-driven buttons -->
-   <script type="module">
-     const $ = (sel) => document.querySelector(sel);
-     const featuredEl = $("#featured");
-     const linksEl = $("#links");
-     const pressEl = $("#press");
-     const pressListEl = $("#pressList");
-diff --git a/index.html b/index.html
-index 0a7863d8a0643b1cb2e08eada758cab53e4f59e7..e82adbac2ccea212439f509286230b686e56a753 100644
---- a/index.html
-+++ b/index.html
-@@ -144,39 +135,34 @@
-       const frag = document.createDocumentFragment();
-       items.forEach(item => {
-         const li = document.createElement('li');
-         li.appendChild(createButton(item));
-         frag.appendChild(li);
-       });
-       container.textContent = "";
-       container.appendChild(frag);
-     }
- 
-     try {
-       const res = await fetch('/links.json', { cache: 'no-store' });
-       const data = await res.json();
- 
-       if (Array.isArray(data.featured)) renderList(featuredEl, data.featured);
-       if (Array.isArray(data.socials)) renderList(linksEl, data.socials.filter(x => !x.optional));
-       const press = (data.socials || []).filter(x => x.optional);
-       if (press.length) {
-         renderList(pressListEl, press);
-         pressEl.hidden = false;
-       }
-     } catch (e) {
-       // Minimal fallback if links.json fails
-       featuredEl.innerHTML = `
-         <li><a class="btn" href="https://found.ee/RECOVERY1" target="_blank" rel="noopener" aria-label="RECOVERY — Stream — found.ee">${ICONS.link}<span class="btn-text"><span class="btn-title">RECOVERY — Stream</span><span class="btn-meta">found.ee</span></span></a></li>
--        <li><a class="btn" href="https://found.ee/time-10" target="_blank" rel="noopener" aria-label="TIME — Stream — found.ee">${ICONS.link}<span class="btn-text"><span class="btn-title">TIME — Stream</span><span class="btn-meta">found.ee</span></span></a></li>
-       `;
-       linksEl.innerHTML = `
--        <li><a class="btn" href="https://open.spotify.com/artist/0U2ZIIYIMFChatxKoQJdTU" target="_blank" rel="noopener" aria-label="Spotify (Artist) — Spotify">${ICONS.spotify}<span class="btn-text"><span class="btn-title">Spotify (Artist)</span><span class="btn-meta">Spotify</span></span></a></li>
--        <li><a class="btn" href="https://music.apple.com/us/album/recovery-single/1824116381" target="_blank" rel="noopener" aria-label="Apple Music — RECOVERY — Apple Music">${ICONS.apple}<span class="btn-text"><span class="btn-title">Apple Music — RECOVERY</span><span class="btn-meta">Apple Music - Web Player</span></span></a></li>
--        <li><a class="btn" href="https://music.apple.com/us/song/time/1788721331" target="_blank" rel="noopener" aria-label="Apple Music — Time — Apple Music">${ICONS.apple}<span class="btn-text"><span class="btn-title">Apple Music — Time</span><span class="btn-meta">Apple Music - Web Player</span></span></a></li>
-         <li><a class="btn" href="https://instagram.com/thinktwicefl" target="_blank" rel="noopener" aria-label="Instagram — Instagram">${ICONS.instagram}<span class="btn-text"><span class="btn-title">Instagram</span><span class="btn-meta">Instagram</span></span></a></li>
-         <li><a class="btn" href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener" aria-label="TikTok — TikTok">${ICONS.tiktok}<span class="btn-text"><span class="btn-title">TikTok</span><span class="btn-meta">TikTok</span></span></a></li>
--        <li><a class="btn" href="https://youtube.com/@thinktwicefl" target="_blank" rel="noopener" aria-label="YouTube — YouTube">${ICONS.youtube}<span class="btn-text"><span class="btn-title">YouTube</span><span class="btn-meta">YouTube</span></span></a></li>
-       `;
-     }
-   </script>
- </body>
- </html>
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THINK TWICE | Official Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Metal+Mania&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles to apply the fonts and new aesthetic */
+        body {
+            font-family: 'Changa', sans-serif;
+            background-color: #000000;
+            /* Gritty background texture */
+            background-image: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+        }
+        .metal-font {
+            font-family: 'Metal Mania', cursive;
+        }
+        .hero-bg {
+            /* New Hero Image: Live concert crowd */
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.85) 0%, rgba(0,0,0,1) 100%), url('https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-position: center;
+            border-bottom: 4px solid #991b1b; /* Dark red border */
+        }
+        .btn-social {
+            transition: all 0.3s ease;
+        }
+        .btn-social:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 12px rgba(153, 27, 27, 0.5);
+        }
+        .gallery-img {
+            transition: all 0.3s ease;
+            filter: saturate(0.8); /* Slightly desaturate images */
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            filter: saturate(1.2) contrast(1.1); /* Punch up colors on hover */
+        }
+        .section-card {
+            background-color: rgba(10, 10, 10, 0.8); /* Darker, slightly transparent card background */
+            border: 1px solid #404040;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Header & Hero Section -->
+    <header class="hero-bg text-center py-24 md:py-36">
+        <div class="container mx-auto px-4">
+            <h1 class="metal-font text-6xl md:text-8xl lg:text-9xl text-red-700 tracking-wider" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.8);">THINK TWICE</h1>
+            <p class="text-lg md:text-2xl mt-4 text-gray-300 font-semibold tracking-widest">TAMPA, FL METALCORE</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 pt-6 pb-12">
+
+        <!-- Music Section -->
+        <section id="music" class="mb-16">
+            <h2 class="metal-font text-5xl text-center mb-12 text-red-700">Music</h2>
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Card for Recovery -->
+                <div class="rounded-lg overflow-hidden flex flex-col section-card shadow-lg shadow-red-900/20">
+                    <img class="w-full object-cover" src="https://scontent-ord5-1.cdninstagram.com/v/t51.2885-15/447614828_476906231698263_650638516996658019_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=18de74&_nc_ohc=w3x_g2p2a_cQ7kNvgFvD1u-&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYBv-k-g-f-m-z-p-q-r-s-t-u-v-w-x-y-z&oe=6686A5F5" alt="Album Art for 'Recovery'">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-3xl font-bold mb-2 text-white">'Recovery'</h3>
+                        <p class="text-gray-400 mb-6">Listen on your favorite platform.</p>
+                        <div class="flex flex-wrap gap-4 mt-auto">
+                            <a href="https://open.spotify.com/track/6vJ0nvN5sY86VJoq6a5gFE" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-full btn-social">Spotify</a>
+                            <a href="https://music.apple.com/us/album/recovery/1701384752?i=1701384753" target="_blank" class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full btn-social">Apple Music</a>
+                            <a href="https://www.youtube.com/watch?v=sJ5xH-N-28s" target="_blank" class="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full btn-social">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card for Time -->
+                <div class="rounded-lg overflow-hidden flex flex-col section-card shadow-lg shadow-red-900/20">
+                    <img class="w-full object-cover" src="https://i1.sndcdn.com/artworks-fD2N5a22iY2v-0-t500x500.jpg" alt="Album Art for 'Time'">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="text-3xl font-bold mb-2 text-white">'Time'</h3>
+                        <p class="text-gray-400 mb-6">Listen on your favorite platform.</p>
+                        <div class="flex flex-wrap gap-4 mt-auto">
+                           <a href="https://open.spotify.com/track/3Y7tY2B4Q32aGgT12p5uT0" target="_blank" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded-full btn-social">Spotify</a>
+                            <a href="https://music.apple.com/us/album/time-single/1695750013" target="_blank" class="bg-blue-700 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full btn-social">Apple Music</a>
+                            <a href="https://www.youtube.com/watch?v=Yw-s45-t0aE" target="_blank" class="bg-red-700 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full btn-social">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shows Section -->
+        <section id="shows" class="my-16 text-center">
+            <h2 class="metal-font text-5xl mb-8 text-red-700">Upcoming Shows</h2>
+            <div class="rounded-lg p-8 max-w-md mx-auto section-card shadow-lg shadow-red-900/20">
+                <p class="text-2xl text-gray-300">Tour dates coming soon.</p>
+                <p class="text-gray-500">Check back for updates!</p>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section id="video" class="my-16">
+            <h2 class="metal-font text-5xl text-center mb-8 text-red-700">Latest Video</h2>
+            <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto border-2 border-gray-800 rounded-lg shadow-lg shadow-red-900/20">
+                <iframe class="rounded-lg" src="https://www.youtube.com/embed/sJ5xH-N-28s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery" class="my-16">
+            <h2 class="metal-font text-5xl text-center mb-8 text-red-700">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg shadow-lg border-2 border-gray-900 hover:border-red-700 transition-all duration-300">
+                    <img src="https://scontent-ord5-1.cdninstagram.com/v/t51.2885-15/441869873_1469085810368383_3114946387060592758_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q-r-s-t&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&oe=66869E21" alt="Think Twice live performance 1" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg border-2 border-gray-900 hover:border-red-700 transition-all duration-300">
+                    <img src="https://scontent-ord5-2.cdninstagram.com/v/t51.2885-15/441029098_1143098883506453_452316164998728955_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=18de74&_nc_ohc=b-3Z0a0aQ-gQ7kNvgE8AW8-&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYB39P2eJ_kMh-g_pU-5oFp-q3p-9a3aZ-b1b7a2A&oe=6686B1C1" alt="Think Twice live performance 2" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg border-2 border-gray-900 hover:border-red-700 transition-all duration-300">
+                    <img src="https://scontent-ord5-1.cdninstagram.com/v/t51.2885-15/436329091_1124119932205608_485574570087780826_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=18de74&_nc_ohc=x-y-z-a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q&_nc_ht=scontent-ord5-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&oe=6686A9D3" alt="Think Twice band photo" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg border-2 border-gray-900 hover:border-red-700 transition-all duration-300">
+                    <img src="https://scontent-ord5-2.cdninstagram.com/v/t51.2885-15/435133284_3655184931424750_484837877903833552_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=a-b-c-d-e-f-g-h-i-j-k-l-m-n-o-p-q-r-s-t&_nc_ht=scontent-ord5-2.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&oe=6686B6F8" alt="Think Twice live performance 4" class="w-full h-full object-cover gallery-img">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Socials Section -->
+    <footer class="bg-black py-12 border-t-4 border-red-700">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="metal-font text-4xl mb-6 text-red-700">Follow Us</h2>
+            <div class="flex justify-center items-center space-x-6 mb-8">
+                <a href="https://www.instagram.com/thinktwicefl/?hl=en" target="_blank" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c-4.068 0-4.555.016-6.138.09-1.583.073-2.666.333-3.61.733-.95.4-1.69.95-2.433 1.69-.744.743-1.29 1.483-1.69 2.433-.4 1.033-.66 2.116-.733 3.61C2.016 7.76 2 8.247 2 12.315c0 4.068.016 4.555.09 6.138.073 1.583.333 2.666.733 3.61.4.95.95 1.69 1.69 2.433.743.744 1.483 1.29 2.433 1.69 1.033.4 2.116.66 3.61.733 1.583.074 2.07.09 6.138.09s4.555-.016 6.138-.09c1.583-.073 2.666-.333 3.61-.733.95-.4 1.69-.95 2.433-1.69.744-.743 1.29-1.483 1.69-2.433.4-1.033.66-2.116-.733-3.61.074-1.583.09-2.07.09-6.138s-.016-4.555-.09-6.138c-.073-1.583-.333-2.666-.733-3.61-.4-.95-.95-1.69-1.69-2.433-.743-.744-1.483-1.29-2.433-1.69-1.033-.4-2.116-.66-3.61-.733C16.87 2.016 16.383 2 12.315 2zM8.447 19.313c-1.483 0-2.685-1.202-2.685-2.685S6.964 13.943 8.447 13.943s2.685 1.202 2.685 2.685S9.93 19.313 8.447 19.313zm8.51-11.41c0 .79-.643 1.433-1.433 1.433s-1.433-.643-1.433-1.433.643-1.433 1.433-1.433 1.433.643 1.433 1.433zM12 16.138a4.138 4.138 0 110-8.276 4.138 4.138 0 010 8.276z"></path></svg>
+                </a>
+                <a href="https://www.facebook.com/ThinkTwiceSounds/" target="_blank" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg>
+                </a>
+                 <a href="https://www.tiktok.com/@thinktwicefl/" target="_blank" class="text-gray-400 hover:text-white transition duration-300 transform hover:scale-110">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-2.43.05-4.86-.95-6.43-2.8-1.58-1.87-2.06-4.38-1.38-6.74.55-1.91 1.82-3.53 3.45-4.51.92-.56 1.93-.89 2.99-1.02.02-3.11-.01-6.22.02-9.33.01-1.4.52-2.78 1.34-3.95 1.31-1.92 3.58-3.17 5.91-3.21zM8.94 15.71c.01 1.34.02 2.68.01 4.02-.01 1.12-.43 2.23-1.16 3.09-1.2 1.4-3.1 2.03-4.85 1.53-1.75-.49-2.9-2.03-2.8-3.87.05-1.02.5-1.99 1.25-2.74.56-.55 1.24-.93 1.98-1.15.01-1.34.02-2.68.01-4.02z"></path></svg>
+                </a>
+            </div>
+            <p class="text-gray-600">&copy; <span id="year"></span> THINK TWICE. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
