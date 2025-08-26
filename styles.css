@@ -10,12 +10,11 @@
   max-width: 220px;
   height: auto;
 }
-:band-title {
+.band-title {
   font-family: 'Oswald', 'Impact', 'Arial Black', sans-serif;
   font-size: 3rem;
   letter-spacing: 0.08em;
   color: var(--accent);
-  text-shadow: 0 2px 12px #0ea5e9cc, 0 1px 0 #111827;
   font-weight: 900;
   margin: 0;
   text-transform: uppercase;
