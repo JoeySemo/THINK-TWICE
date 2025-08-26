@@ -1,4 +1,25 @@
-// FILE: styles.css
+.band-header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.band-logo {
+  filter: drop-shadow(0 2px 12px #22d3ee88);
+  max-width: 220px;
+  height: auto;
+}
+:band-title {
+  font-family: 'Oswald', 'Impact', 'Arial Black', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  text-shadow: 0 2px 12px #0ea5e9cc, 0 1px 0 #111827;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+}
 :root{
   --bg-0:#0b0b0f; --bg-1:#111827;
   --surface: rgba(255,255,255,.04);
