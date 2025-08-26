@@ -1,4 +1,4 @@
-// FILE: README.md
+
 # THINK TWICE — Link Hub
 
 This repo contains a static, dark‑themed microsite for the Florida metalcore band **THINK TWICE**. It uses no build step, so it deploys instantly on Vercel.
