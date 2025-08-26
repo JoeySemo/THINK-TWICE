@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>THINK TWICE</title>
+  <title>THINK TWICE // Florida Metalcore</title>
   <meta name="description" content="Florida metal core. New singles out now." />
   <link rel="canonical" href="https://thinktwice.verdantmission.org/" />
 
@@ -70,22 +70,16 @@
         <h1 id="site-title" class="band-title metalcore-title">
           <span class="metalcore-outline">THINK TWICE</span>
         </h1>
+        <div class="metalcore-sub">Florida Metalcore</div>
       </div>
-      <p class="hook">Florida Metalcore. <strong>New singles out now.</strong></p>
+      <p class="hook">New singles out now. <span class="hook-highlight">Listen & follow below!</span></p>
     </header>
 
     <main id="main" role="main">
       <nav aria-label="Featured releases">
         <h2 class="section-title">Featured releases</h2>
         <ul id="featured" class="list" aria-live="polite"></ul>
-          <li class="btn">
-            <span class="btn-icon">🔗</span>
-            <span class="btn-text">
-              <span class="btn-title">RECOVERY — Stream</span>
-              <span class="btn-meta">found.ee</span>
-            </span>
-          </li>
-          <!-- Only one featured release link shown -->
+    <!-- Featured release will be rendered by JS -->
       </ul>
     </nav>
 
@@ -158,7 +152,10 @@
       const res = await fetch('/links.json', { cache: 'no-store' });
       const data = await res.json();
 
-      if (Array.isArray(data.featured)) renderList(featuredEl, data.featured);
+      // Only show the top featured release
+      if (Array.isArray(data.featured) && data.featured.length > 0) {
+        renderList(featuredEl, [data.featured[0]]);
+      }
       if (Array.isArray(data.socials)) renderList(linksEl, data.socials.filter(x => !x.optional));
       const press = (data.socials || []).filter(x => x.optional);
       if (press.length) {
