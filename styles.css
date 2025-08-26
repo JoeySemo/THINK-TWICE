@@ -24,28 +24,28 @@
   text-shadow: 0 4px 24px #0b0b0f, 0 2px 0 #111827;
 }
 :root{
-  --bg-0:#0b0b0f; --bg-1:#111827;
-  --surface: rgba(255,255,255,.04);
-  --border: rgba(255,255,255,.09);
-  --text:#f9fafb;
-  --muted:#9ca3af;
+:root{
+  --bg-0:#fff; --bg-1:#f5f7fb;
+  --surface: rgba(0,0,0,.03);
+  --border: rgba(0,0,0,.09);
+  --text:#111827;
+  --muted:#4b5563;
   --ring: #22d3ee;
   --accent:#22d3ee;
-  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --shadow: 0 10px 30px rgba(0,0,0,.10);
   --radius: 14px;
   font-size: clamp(16px, 15px + .3vw, 18px);
 }
-
 @media (prefers-color-scheme: light){
   :root{
     --bg-0:#f5f7fb; --bg-1:#e9eef7;
     --surface: rgba(0,0,0,.06);
     --border: rgba(0,0,0,.12);
-    --text:#111827; --muted:#4b5563;
-    --ring:#0ea5e9; --accent:#0ea5e9;
-  }
+.metalcore-bg {
+  background: linear-gradient(120deg, #fff 0%, #e0f7fa 60%, #f5f7fb 100%);
+  box-shadow: 0 8px 32px #22d3ee22, 0 2px 8px #e0f7fa;
+  border: 2px solid #22d3ee;
 }
-
 .visually-hidden{position:absolute!important;clip:rect(1px,1px,1px,1px)!important;padding:0!important;border:0!important;height:1px!important;width:1px!important;overflow:hidden!important;white-space:nowrap!important}
 
 .skip-link{
