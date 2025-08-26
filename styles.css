@@ -2,26 +2,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 28px;
-  padding: 48px 0 32px 0;
-  border-radius: 18px;
+  margin-bottom: 36px;
+  padding: 64px 0 40px 0;
+  border-radius: 24px;
   position: relative;
+  background: repeating-linear-gradient(135deg, #22d3ee 0 12px, #fff 12px 24px, #111827 24px 36px);
+  box-shadow: 0 12px 48px #22d3ee33, 0 2px 8px #0b0b0f;
+  border: 3px solid #22d3ee;
+  overflow: hidden;
 }
 .metalcore-bg {
-  background: linear-gradient(120deg, #0b0b0f 0%, #22d3ee 60%, #111827 100%);
-  box-shadow: 0 8px 32px #22d3ee44, 0 2px 8px #0b0b0f;
-  border: 2px solid #22d3ee;
+  background: none;
 }
 .band-title {
   font-family: 'Oswald', 'Impact', 'Arial Black', sans-serif;
-  font-size: 5rem;
-  letter-spacing: 0.18em;
-  color: #22d3ee;
+  font-size: 6rem;
+  letter-spacing: 0.22em;
+  color: #fff;
   font-weight: 900;
   margin: 0;
   text-transform: uppercase;
   text-align: center;
-  text-shadow: 0 4px 24px #0b0b0f, 0 2px 0 #111827;
+  position: relative;
+  z-index: 2;
+}
+.metalcore-title {
+  font-family: 'Oswald', 'Impact', 'Arial Black', sans-serif;
+  font-size: 6rem;
+  letter-spacing: 0.22em;
+  color: #fff;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.metalcore-outline {
+  display: inline-block;
+  padding: 0 16px;
+  background: linear-gradient(90deg, #22d3ee 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    2px 2px 0 #111827,
+    0 0 16px #22d3ee,
+    0 0 2px #fff;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+}
 }
 :root{
 :root{
