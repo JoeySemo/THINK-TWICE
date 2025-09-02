@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const galleryImages = [
   {
-    src: "/thinktwice/photos/live-2025/crowd-engagement.png",
+    src: "https://placehold.co/800x500?text=Live+1",
     alt: "THINK TWICE live with crowd hands raised",
     caption: "Thank you Orlando — August 2025",
   },
   {
-    src: "/thinktwice/photos/live-2025/vocalist-closeup.png",
+    src: "https://placehold.co/800x500?text=Live+2",
     alt: "Vocalist screaming into mic under red lighting",
     caption: "Lead vocals mid-set, intense energy",
   },
   {
-    src: "/thinktwice/photos/live-2025/full-band-stage.png",
+    src: "https://placehold.co/800x500?text=Live+3",
     alt: "Full band on stage with color lighting",
     caption: "Full band lineup, opening for Attack Attack!",
   },
   {
-    src: "/thinktwice/photos/live-2025/drummer-action.png",
+    src: "https://placehold.co/800x500?text=Live+4",
     alt: "Drummer mid-performance with sticks in motion",
     caption: "Locked in on drums. Pure rhythm.",
   },
@@ -28,7 +28,7 @@ export default function LiveGalleryPage() {
     <main className="bg-[#0B0B0F] text-white min-h-screen">
       <section className="relative w-full h-[80vh] overflow-hidden">
         <Image
-          src="/thinktwice/photos/live-2025/crowd-engagement.png"
+          src="https://placehold.co/1600x900?text=Live+Hero"
           alt="THINK TWICE live with crowd"
           layout="fill"
           objectFit="cover"
