@@ -1,10 +1,10 @@
 {
-  "name": "think-twice-project",
+  "name": "think-twice-band-website",
   "version": "1.0.0",
-  "description": "Think Twice - An intelligent decision-making platform that helps you analyze, evaluate, and choose with confidence.",
+  "description": "Official website for Think Twice band. Stream 'Recovery' and 'Time' on all major platforms. Follow @thinktwicefl on Instagram and TikTok.",
   "private": true,
-  "author": "Joseph Knittel",
-  "keywords": ["decision-making", "analysis", "evaluation", "nextjs", "typescript", "tailwind"],
+  "author": "Think Twice",
+  "keywords": ["think-twice", "band", "music", "recovery", "time", "thinktwicefl", "nextjs", "typescript", "tailwind"],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",

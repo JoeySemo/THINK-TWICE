@@ -1,23 +1,29 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
+      <nav className="bg-black/90 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-gray-900">Think Twice</h1>
+              <h1 className="text-2xl font-bold text-white">THINK TWICE</h1>
             </div>
             <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a href="#features" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                  Features
+              <div className="ml-10 flex items-baseline space-x-8">
+                <a href="#music" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+                  MUSIC
                 </a>
-                <a href="#about" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                  About
+                <a href="#tour" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+                  TOUR
                 </a>
-                <a href="#contact" className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                  Contact
+                <a href="#merch" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+                  MERCH
+                </a>
+                <a href="#about" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+                  ABOUT
+                </a>
+                <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors">
+                  CONTACT
                 </a>
               </div>
             </div>
@@ -29,212 +35,305 @@ export default function Home() {
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-              Think Twice,
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                {" "}Act Once
-              </span>
+            <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
+              THINK TWICE
             </h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Make better decisions with our intelligent decision-making platform. 
-              Analyze, evaluate, and choose with confidence.
+            <p className="text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              RECOVERY STREAMING NOW
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors shadow-lg hover:shadow-xl">
-                Get Started
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <button className="bg-white text-black font-bold py-4 px-8 rounded-lg transition-colors hover:bg-gray-200 text-lg">
+                LISTEN TO RECOVERY
               </button>
-              <button className="border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-8 rounded-lg transition-colors">
-                Learn More
+              <button className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg transition-colors hover:bg-white hover:text-black text-lg">
+                WATCH VIDEOS
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-white">
+      {/* Latest Release */}
+      <section id="music" className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Think Twice?
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              LATEST RELEASE
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Our platform provides the tools and insights you need to make informed decisions.
+            <p className="text-xl text-gray-300">
+              Recovery - Available Now
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="bg-gray-800 p-8 rounded-lg">
+              <div className="aspect-square bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg mb-6 flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="text-3xl font-bold text-white mb-2">RECOVERY</h3>
+                  <p className="text-gray-300">THINK TWICE</p>
+                </div>
+              </div>
+              <div className="space-y-4">
+                <button className="w-full bg-white text-black font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors">
+                  STREAM ON SPOTIFY
+                </button>
+                <button className="w-full border border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-black transition-colors">
+                  STREAM ON APPLE MUSIC
+                </button>
+                <button className="w-full border border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-black transition-colors">
+                  STREAM ON YOUTUBE
+                </button>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-6">STREAMING LINKS</h3>
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 bg-gray-800 rounded-lg">
+                  <span className="text-white font-medium">Spotify</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors">→</button>
+                </div>
+                <div className="flex items-center justify-between p-4 bg-gray-800 rounded-lg">
+                  <span className="text-white font-medium">Apple Music</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors">→</button>
+                </div>
+                <div className="flex items-center justify-between p-4 bg-gray-800 rounded-lg">
+                  <span className="text-white font-medium">YouTube Music</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors">→</button>
+                </div>
+                <div className="flex items-center justify-between p-4 bg-gray-800 rounded-lg">
+                  <span className="text-white font-medium">Amazon Music</span>
+                  <button className="text-purple-400 hover:text-purple-300 transition-colors">→</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              FOLLOW US
+            </h2>
+            <p className="text-xl text-gray-300">
+              Stay connected with Think Twice
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+            <a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="bg-gradient-to-br from-pink-600 to-purple-600 p-8 rounded-lg text-center hover:scale-105 transition-transform">
+                <div className="text-4xl mb-4">📸</div>
+                <h3 className="text-2xl font-bold text-white mb-2">INSTAGRAM</h3>
+                <p className="text-gray-200">@thinktwicefl</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Analysis</h3>
-              <p className="text-gray-600">
-                Advanced algorithms help you analyze complex decisions with data-driven insights.
-              </p>
-            </div>
+            </a>
             
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+            <a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="bg-gradient-to-br from-black to-gray-800 p-8 rounded-lg text-center hover:scale-105 transition-transform">
+                <div className="text-4xl mb-4">🎵</div>
+                <h3 className="text-2xl font-bold text-white mb-2">TIKTOK</h3>
+                <p className="text-gray-200">@thinktwicefl</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Quick Decisions</h3>
-              <p className="text-gray-600">
-                Streamlined process helps you reach decisions faster without compromising quality.
-              </p>
-            </div>
+            </a>
             
-            <div className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
+              <div className="bg-gradient-to-br from-green-600 to-blue-600 p-8 rounded-lg text-center hover:scale-105 transition-transform">
+                <div className="text-4xl mb-4">🔗</div>
+                <h3 className="text-2xl font-bold text-white mb-2">LINKTREE</h3>
+                <p className="text-gray-200">All Links</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Confident Choices</h3>
-              <p className="text-gray-600">
-                Make decisions with confidence knowing you&apos;ve considered all the important factors.
-              </p>
-            </div>
+            </a>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                About Think Twice
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                ABOUT THINK TWICE
               </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Think Twice was born from the idea that better decisions lead to better outcomes. 
-                We believe that taking the time to properly analyze and evaluate your options 
-                is the key to success in both personal and professional life.
+              <p className="text-lg text-gray-300 mb-6">
+                Think Twice is a dynamic musical project that brings together powerful vocals, 
+                innovative production, and meaningful lyrics. With their latest release &ldquo;Recovery,&rdquo; 
+                the band continues to push boundaries and connect with audiences worldwide.
               </p>
-              <p className="text-lg text-gray-600 mb-8">
-                Our platform combines cutting-edge technology with proven decision-making 
-                frameworks to help you navigate complex choices with clarity and confidence.
+              <p className="text-lg text-gray-300 mb-8">
+                Follow their journey on social media and stream their music on all major platforms. 
+                From intimate acoustic sessions to full production tracks, Think Twice delivers 
+                authentic music that resonates with listeners.
               </p>
-              <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-                Learn More About Us
-              </button>
+              <div className="flex space-x-4">
+                <button className="bg-white text-black font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors">
+                  READ MORE
+                </button>
+                <button className="border border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-black transition-colors">
+                  CONTACT
+                </button>
+              </div>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-lg">
+            <div className="bg-gray-800 p-8 rounded-lg">
               <div className="space-y-6">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-blue-600 font-bold">1</span>
+                  <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">🎤</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Define Your Decision</h3>
-                    <p className="text-gray-600 text-sm">Clearly outline what you need to decide</p>
+                    <h3 className="font-semibold text-white">VOCALS</h3>
+                    <p className="text-gray-400 text-sm">Lead & Harmony</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-purple-600 font-bold">2</span>
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">🎸</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Gather Information</h3>
-                    <p className="text-gray-600 text-sm">Collect relevant data and insights</p>
+                    <h3 className="font-semibold text-white">INSTRUMENTS</h3>
+                    <p className="text-gray-400 text-sm">Guitar & Production</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-green-600 font-bold">3</span>
+                  <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">🎵</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Evaluate Options</h3>
-                    <p className="text-gray-600 text-sm">Analyze pros, cons, and trade-offs</p>
+                    <h3 className="font-semibold text-white">MUSIC</h3>
+                    <p className="text-gray-400 text-sm">Original Compositions</p>
                   </div>
                 </div>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-yellow-600 font-bold">4</span>
+                  <div className="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-white font-bold">🎬</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">Make Your Choice</h3>
-                    <p className="text-gray-600 text-sm">Decide with confidence and clarity</p>
+                    <h3 className="font-semibold text-white">CONTENT</h3>
+                    <p className="text-gray-400 text-sm">Music Videos & Covers</p>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tour Dates */}
+      <section id="tour" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              TOUR DATES
+            </h2>
+            <p className="text-xl text-gray-300">
+              Catch Think Twice live
+            </p>
+          </div>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="space-y-4">
+              <div className="bg-gray-900 p-6 rounded-lg border border-gray-800">
+                <div className="flex justify-between items-center">
+                  <div>
+                    <h3 className="text-xl font-bold text-white">More dates coming soon...</h3>
+                    <p className="text-gray-400">Stay tuned for upcoming shows</p>
+                  </div>
+                  <button className="bg-white text-black font-bold py-2 px-6 rounded-lg hover:bg-gray-200 transition-colors">
+                    NOTIFY ME
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Merch Section */}
+      <section id="merch" className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              MERCHANDISE
+            </h2>
+            <p className="text-xl text-gray-300">
+              Official Think Twice merchandise coming soon
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gray-800 p-6 rounded-lg text-center">
+              <div className="w-full h-64 bg-gradient-to-br from-purple-600 to-blue-600 rounded-lg mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl">👕</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">T-SHIRTS</h3>
+              <p className="text-gray-400 mb-4">Official band tees</p>
+              <button className="w-full bg-white text-black font-bold py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                COMING SOON
+              </button>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg text-center">
+              <div className="w-full h-64 bg-gradient-to-br from-green-600 to-blue-600 rounded-lg mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl">🎵</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">MUSIC</h3>
+              <p className="text-gray-400 mb-4">Physical releases</p>
+              <button className="w-full bg-white text-black font-bold py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                COMING SOON
+              </button>
+            </div>
+            
+            <div className="bg-gray-800 p-6 rounded-lg text-center">
+              <div className="w-full h-64 bg-gradient-to-br from-pink-600 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
+                <span className="text-white text-2xl">🎁</span>
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">ACCESSORIES</h3>
+              <p className="text-gray-400 mb-4">Band accessories</p>
+              <button className="w-full bg-white text-black font-bold py-2 px-4 rounded-lg hover:bg-gray-200 transition-colors">
+                COMING SOON
+              </button>
             </div>
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-white">
+      <section id="contact" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get In Touch
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              CONTACT
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Ready to start making better decisions? We&apos;d love to hear from you.
+            <p className="text-xl text-gray-300">
+              Get in touch with Think Twice
             </p>
           </div>
           
           <div className="max-w-2xl mx-auto">
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your first name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your last name"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell us about your decision-making challenges..."
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
-              >
-                Send Message
-              </button>
-            </form>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="bg-gray-900 p-6 rounded-lg text-center hover:bg-gray-800 transition-colors">
+                <div className="text-3xl mb-3">📸</div>
+                <h3 className="text-xl font-bold text-white mb-2">Instagram</h3>
+                <p className="text-gray-400">@thinktwicefl</p>
+              </a>
+              
+              <a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="bg-gray-900 p-6 rounded-lg text-center hover:bg-gray-800 transition-colors">
+                <div className="text-3xl mb-3">🎵</div>
+                <h3 className="text-xl font-bold text-white mb-2">TikTok</h3>
+                <p className="text-gray-400">@thinktwicefl</p>
+              </a>
+            </div>
+            
+            <div className="text-center">
+              <p className="text-gray-400 mb-4">For booking and business inquiries:</p>
+              <a href="mailto:contact@thinktwice.com" className="text-white hover:text-gray-300 transition-colors">
+                contact@thinktwice.com
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -244,33 +343,33 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Think Twice</h3>
+              <h3 className="text-2xl font-bold mb-4">THINK TWICE</h3>
               <p className="text-gray-400">
-                Making better decisions, one choice at a time.
+                Official website for the band Think Twice
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Product</h4>
+              <h4 className="font-semibold mb-4">MUSIC</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">API</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Recovery</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Time</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Streaming</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-semibold mb-4">SOCIAL</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
+                <li><a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a></li>
+                <li><a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a></li>
+                <li><a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Linktree</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Support</h4>
+              <h4 className="font-semibold mb-4">CONTACT</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
+                <li><a href="mailto:contact@thinktwice.com" className="hover:text-white transition-colors">Email</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Booking</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Press</a></li>
               </ul>
             </div>
           </div>

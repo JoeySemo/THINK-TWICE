@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Think Twice - Make Better Decisions",
-  description: "Think Twice is an intelligent decision-making platform that helps you analyze, evaluate, and choose with confidence. Make better decisions with our advanced tools and insights.",
-  keywords: ["decision making", "analysis", "evaluation", "choices", "think twice"],
-  authors: [{ name: "Joseph Knittel" }],
+  title: "Think Twice - Official Band Website",
+  description: "Official website for Think Twice band. Stream 'Recovery' and 'Time' on all major platforms. Follow @thinktwicefl on Instagram and TikTok.",
+  keywords: ["think twice", "band", "music", "recovery", "time", "thinktwicefl", "instagram", "tiktok"],
+  authors: [{ name: "Think Twice" }],
   openGraph: {
-    title: "Think Twice - Make Better Decisions",
-    description: "Make better decisions with our intelligent decision-making platform. Analyze, evaluate, and choose with confidence.",
+    title: "Think Twice - Official Band Website",
+    description: "Official website for Think Twice band. Stream 'Recovery' and 'Time' on all major platforms.",
     type: "website",
   },
 };
