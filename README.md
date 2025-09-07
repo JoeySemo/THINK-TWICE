@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Think Twice - Decision Making Platform
 
-## Getting Started
+A modern, intelligent decision-making platform built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Features
 
+- **Smart Analysis**: Advanced algorithms help analyze complex decisions with data-driven insights
+- **Quick Decisions**: Streamlined process for faster decision-making without compromising quality
+- **Confident Choices**: Make decisions with confidence knowing all important factors are considered
+- **Modern UI**: Beautiful, responsive design with smooth animations and transitions
+- **Mobile-First**: Fully responsive design that works perfectly on all devices
+
+## 🛠️ Technology Stack
+
+- **Framework**: Next.js 15.5.2 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Fonts**: Geist Sans & Geist Mono
+- **Development**: ESLint, Turbopack for fast builds
+
+## 📦 Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd think-twice-project
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Start the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## 🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with one click
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Other Platforms
+```bash
+# Build the project
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# Start production server
+npm start
+```
 
-## Deploy on Vercel
+## 📁 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+think-twice-project/
+├── src/
+│   └── app/
+│       ├── globals.css      # Global styles
+│       ├── layout.tsx       # Root layout component
+│       └── page.tsx         # Home page component
+├── public/                  # Static assets
+├── package.json            # Dependencies and scripts
+├── tailwind.config.js      # Tailwind configuration
+├── tsconfig.json          # TypeScript configuration
+└── README.md              # This file
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Design Features
+
+- **Gradient Backgrounds**: Beautiful blue-to-purple gradients
+- **Glass Morphism**: Backdrop blur effects on navigation
+- **Smooth Animations**: Hover effects and transitions
+- **Icon Integration**: Custom SVG icons for features
+- **Form Styling**: Modern form inputs with focus states
+- **Responsive Grid**: Adaptive layouts for all screen sizes
+
+## 📱 Sections
+
+1. **Navigation**: Sticky header with smooth scroll navigation
+2. **Hero**: Eye-catching headline with call-to-action buttons
+3. **Features**: Three-column feature showcase with icons
+4. **About**: Two-column layout with decision-making process
+5. **Contact**: Contact form with modern styling
+6. **Footer**: Comprehensive footer with links and branding
+
+## 🔧 Customization
+
+### Colors
+The website uses a carefully selected color palette:
+- Primary: Blue (#2563eb)
+- Secondary: Purple (#7c3aed)
+- Accent: Green (#059669)
+- Neutral: Gray scale
+
+### Typography
+- Headings: Bold, large sizes for impact
+- Body: Clean, readable text with proper spacing
+- Fonts: Geist Sans for body text, Geist Mono for code
+
+## 📈 Performance
+
+- **Turbopack**: Fast development builds
+- **Optimized Images**: Next.js Image component for performance
+- **CSS Optimization**: Tailwind CSS for minimal bundle size
+- **TypeScript**: Type safety and better development experience
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Joseph Knittel**
+- Website: [Your Website]
+- Email: [Your Email]
+- GitHub: [Your GitHub]
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- Vercel for the deployment platform
+- All contributors and supporters
+
+---
+
+**Think Twice, Act Once** - Making better decisions, one choice at a time.

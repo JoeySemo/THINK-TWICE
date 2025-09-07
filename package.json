@@ -1,12 +1,17 @@
 {
   "name": "think-twice-project",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Think Twice - An intelligent decision-making platform that helps you analyze, evaluate, and choose with confidence.",
   "private": true,
+  "author": "Joseph Knittel",
+  "keywords": ["decision-making", "analysis", "evaluation", "nextjs", "typescript", "tailwind"],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "19.1.0",
