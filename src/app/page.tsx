@@ -6,7 +6,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <h1 className="text-3xl font-bold text-white tracking-wider">THINK TWICE</h1>
+              <span className="text-3xl font-bold text-white tracking-wider">THINK TWICE</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
@@ -31,22 +31,48 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-black/50"></div>
-        <div className="relative max-w-7xl mx-auto">
+      {/* Hero Section with Band Photos Background */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
+        {/* Background Images */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 to-black/60 z-10"></div>
+          <div className="absolute inset-0 bg-black/30 z-20"></div>
+          
+          {/* Band Photo 1 - Studio Shot */}
+          <div className="absolute top-0 left-0 w-1/3 h-full bg-cover bg-center opacity-20" 
+               style={{
+                 backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDQwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMzMzIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CYW5kIFBob3RvIDE8L3RleHQ+Cjwvc3ZnPg==')`
+               }}>
+          </div>
+          
+          {/* Band Photo 2 - Bass Player */}
+          <div className="absolute top-0 left-1/3 w-1/3 h-full bg-cover bg-center opacity-20" 
+               style={{
+                 backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDQwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjNjY2Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CYW5kIFBob3RvIDI8L3RleHQ+Cjwvc3ZnPg==')`
+               }}>
+          </div>
+          
+          {/* Band Photo 3 - Drummer */}
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-cover bg-center opacity-20" 
+               style={{
+                 backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDQwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjOTk5Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CYW5kIFBob3RvIDM8L3RleHQ+Cjwvc3ZnPg==')`
+               }}>
+          </div>
+        </div>
+        
+        <div className="relative z-30 max-w-7xl mx-auto w-full">
           <div className="text-center">
-            <h1 className="text-7xl md:text-9xl font-black text-white mb-6 tracking-tight">
+            <h1 className="text-7xl md:text-9xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
               THINK TWICE
             </h1>
-            <p className="text-3xl text-red-400 mb-8 max-w-3xl mx-auto font-bold">
+            <p className="text-3xl text-red-400 mb-8 max-w-3xl mx-auto font-bold drop-shadow-lg">
               RECOVERY STREAMING NOW
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="https://open.spotify.com/artist/thinktwice" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg tracking-wide">
-                STREAM ON SPOTIFY
+              <a href="https://open.spotify.com/artist/3RwpIznBaPTxoO4ZsqQt1X" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg tracking-wide drop-shadow-lg">
+                SPOTIFY
               </a>
-              <a href="https://music.apple.com/us/artist/think-twice" target="_blank" rel="noopener noreferrer" className="border-2 border-red-600 text-red-400 font-bold py-4 px-8 rounded-lg transition-colors hover:bg-red-600 hover:text-white text-lg tracking-wide">
+              <a href="https://music.apple.com/us/artist/think-twice/1788373488" target="_blank" rel="noopener noreferrer" className="border-2 border-red-600 text-red-400 font-bold py-4 px-8 rounded-lg transition-colors hover:bg-red-600 hover:text-white text-lg tracking-wide drop-shadow-lg">
                 APPLE MUSIC
               </a>
             </div>
@@ -97,8 +123,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Merch Section */}
+      <section id="merch" className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight">
+              MERCHANDISE
+            </h2>
+            <p className="text-2xl text-red-400 font-bold">
+              Official Think Twice Gear
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg text-center border border-red-600">
+              <div className="w-full h-64 bg-gradient-to-br from-red-600 via-black to-red-800 rounded-lg mb-4 flex items-center justify-center">
+                <span className="text-white text-4xl">👕</span>
+              </div>
+              <h3 className="text-2xl font-black text-white mb-2">T-SHIRTS</h3>
+              <p className="text-red-400 font-bold mb-4">Official band tees</p>
+              <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                COMING SOON
+              </a>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg text-center border border-red-600">
+              <div className="w-full h-64 bg-gradient-to-br from-red-600 via-black to-red-800 rounded-lg mb-4 flex items-center justify-center">
+                <span className="text-white text-4xl">🎵</span>
+              </div>
+              <h3 className="text-2xl font-black text-white mb-2">MUSIC</h3>
+              <p className="text-red-400 font-bold mb-4">Physical releases</p>
+              <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                COMING SOON
+              </a>
+            </div>
+            
+            <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg text-center border border-red-600">
+              <div className="w-full h-64 bg-gradient-to-br from-red-600 via-black to-red-800 rounded-lg mb-4 flex items-center justify-center">
+                <span className="text-white text-4xl">🎁</span>
+              </div>
+              <h3 className="text-2xl font-black text-white mb-2">ACCESSORIES</h3>
+              <p className="text-red-400 font-bold mb-4">Band accessories</p>
+              <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
+                COMING SOON
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* About Section */}
-      <section id="about" className="py-20 bg-black">
+      <section id="about" className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -161,7 +236,7 @@ export default function Home() {
       </section>
 
       {/* Tour Dates */}
-      <section id="tour" className="py-20 bg-gradient-to-b from-gray-900 to-black">
+      <section id="tour" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight">
@@ -185,55 +260,6 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Merch Section */}
-      <section id="merch" className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight">
-              MERCHANDISE
-            </h2>
-            <p className="text-2xl text-red-400 font-bold">
-              Official Think Twice Gear
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg text-center border border-red-600">
-              <div className="w-full h-64 bg-gradient-to-br from-red-600 via-black to-red-800 rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-white text-4xl">👕</span>
-              </div>
-              <h3 className="text-2xl font-black text-white mb-2">T-SHIRTS</h3>
-              <p className="text-red-400 font-bold mb-4">Official band tees</p>
-              <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
-                COMING SOON
-              </a>
-            </div>
-            
-            <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg text-center border border-red-600">
-              <div className="w-full h-64 bg-gradient-to-br from-red-600 via-black to-red-800 rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-white text-4xl">🎵</span>
-              </div>
-              <h3 className="text-2xl font-black text-white mb-2">MUSIC</h3>
-              <p className="text-red-400 font-bold mb-4">Physical releases</p>
-              <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
-                COMING SOON
-              </a>
-            </div>
-            
-            <div className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg text-center border border-red-600">
-              <div className="w-full h-64 bg-gradient-to-br from-red-600 via-black to-red-800 rounded-lg mb-4 flex items-center justify-center">
-                <span className="text-white text-4xl">🎁</span>
-              </div>
-              <h3 className="text-2xl font-black text-white mb-2">ACCESSORIES</h3>
-              <p className="text-red-400 font-bold mb-4">Band accessories</p>
-              <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
-                COMING SOON
-              </a>
             </div>
           </div>
         </div>
@@ -291,8 +317,8 @@ export default function Home() {
             <div>
               <h4 className="font-black mb-4 text-red-400">MUSIC</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="https://open.spotify.com/artist/thinktwice" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Recovery</a></li>
-                <li><a href="https://open.spotify.com/artist/thinktwice" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Time</a></li>
+                <li><a href="https://open.spotify.com/artist/3RwpIznBaPTxoO4ZsqQt1X" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Recovery</a></li>
+                <li><a href="https://open.spotify.com/artist/3RwpIznBaPTxoO4ZsqQt1X" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Time</a></li>
                 <li><a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Streaming</a></li>
               </ul>
             </div>
