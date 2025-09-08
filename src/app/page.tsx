@@ -68,13 +68,30 @@ export default function Home() {
             <h1 className="text-7xl md:text-9xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
               THINK TWICE
             </h1>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
               <a href="https://open.spotify.com/artist/3RwpIznBaPTxoO4ZsqQt1X" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg tracking-wide drop-shadow-lg">
                 SPOTIFY
               </a>
               <a href="https://music.apple.com/us/artist/think-twice/1788373488" target="_blank" rel="noopener noreferrer" className="border-2 border-red-600 text-red-400 font-bold py-4 px-8 rounded-lg transition-colors hover:bg-red-600 hover:text-white text-lg tracking-wide drop-shadow-lg">
                 APPLE MUSIC
               </a>
+              <a href="https://www.youtube.com/channel/UCx2EaVzfp8n3BFKC4kDH3Ow" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg tracking-wide drop-shadow-lg">
+                YOUTUBE
+              </a>
+            </div>
+            
+            {/* YouTube Video Player */}
+            <div className="max-w-4xl mx-auto">
+              <div className="relative w-full" style={{paddingBottom: '56.25%'}}>
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-lg border-2 border-red-600"
+                  src="https://www.youtube.com/embed?listType=playlist&list=UUx2EaVzfp8n3BFKC4kDH3Ow&index=0"
+                  title="Think Twice - Latest Video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
