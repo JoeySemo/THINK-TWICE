@@ -71,9 +71,6 @@ export default function Home() {
             <h1 className="text-7xl md:text-9xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
               THINK TWICE
             </h1>
-            <p className="text-3xl text-red-400 mb-8 max-w-3xl mx-auto font-bold drop-shadow-lg">
-              RECOVERY STREAMING NOW
-            </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <a href="https://open.spotify.com/artist/3RwpIznBaPTxoO4ZsqQt1X" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg tracking-wide drop-shadow-lg">
                 SPOTIFY
@@ -100,29 +97,44 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="bg-gradient-to-br from-pink-600 via-red-600 to-purple-600 p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600">
-                <div className="text-6xl mb-4">📸</div>
-                <h3 className="text-3xl font-black text-white mb-2 tracking-wide">INSTAGRAM</h3>
-                <p className="text-gray-200 font-bold">@thinktwicefl</p>
-                <p className="text-sm text-gray-300 mt-2">Behind the scenes & updates</p>
+              <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
+                <div className="absolute inset-0 bg-cover bg-center opacity-30" 
+                     style={{backgroundImage: `url('/images/band/studio-shot.jpg')`}}>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-600/80 via-red-600/80 to-purple-600/80"></div>
+                <div className="relative z-10">
+                  <h3 className="text-3xl font-black text-white mb-2 tracking-wide">INSTAGRAM</h3>
+                  <p className="text-gray-200 font-bold">@thinktwicefl</p>
+                  <p className="text-sm text-gray-300 mt-2">Behind the scenes & updates</p>
+                </div>
               </div>
             </a>
             
             <a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="bg-gradient-to-br from-black via-gray-800 to-red-600 p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600">
-                <div className="text-6xl mb-4">🎵</div>
-                <h3 className="text-3xl font-black text-white mb-2 tracking-wide">TIKTOK</h3>
-                <p className="text-gray-200 font-bold">@thinktwicefl</p>
-                <p className="text-sm text-gray-300 mt-2">Short form content & covers</p>
+              <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
+                <div className="absolute inset-0 bg-cover bg-center opacity-30" 
+                     style={{backgroundImage: `url('/images/band/bass-player.jpg')`}}>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-800/80 to-red-600/80"></div>
+                <div className="relative z-10">
+                  <h3 className="text-3xl font-black text-white mb-2 tracking-wide">TIKTOK</h3>
+                  <p className="text-gray-200 font-bold">@thinktwicefl</p>
+                  <p className="text-sm text-gray-300 mt-2">Short form content & covers</p>
+                </div>
               </div>
             </a>
             
             <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="bg-gradient-to-br from-green-600 via-red-600 to-blue-600 p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600">
-                <div className="text-6xl mb-4">🔗</div>
-                <h3 className="text-3xl font-black text-white mb-2 tracking-wide">LINKTREE</h3>
-                <p className="text-gray-200 font-bold">All Links</p>
-                <p className="text-sm text-gray-300 mt-2">Everything in one place</p>
+              <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
+                <div className="absolute inset-0 bg-cover bg-center opacity-30" 
+                     style={{backgroundImage: `url('/images/band/drummer.jpg')`}}>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-600/80 via-red-600/80 to-blue-600/80"></div>
+                <div className="relative z-10">
+                  <h3 className="text-3xl font-black text-white mb-2 tracking-wide">LINKTREE</h3>
+                  <p className="text-gray-200 font-bold">All Links</p>
+                  <p className="text-sm text-gray-300 mt-2">Everything in one place</p>
+                </div>
               </div>
             </a>
           </div>
@@ -147,7 +159,7 @@ export default function Home() {
                 <span className="text-white text-4xl">👕</span>
               </div>
               <h3 className="text-2xl font-black text-white mb-2">T-SHIRTS</h3>
-              <p className="text-red-400 font-bold mb-4">Official band tees</p>
+              <p className="text-red-400 font-bold mb-4">Custom designs coming soon</p>
               <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
                 COMING SOON
               </a>
@@ -169,7 +181,7 @@ export default function Home() {
                 <span className="text-white text-4xl">🎁</span>
               </div>
               <h3 className="text-2xl font-black text-white mb-2">ACCESSORIES</h3>
-              <p className="text-red-400 font-bold mb-4">Band accessories</p>
+              <p className="text-red-400 font-bold mb-4">Custom accessories coming soon</p>
               <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors">
                 COMING SOON
               </a>
@@ -184,7 +196,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
-                ABOUT THINK TWICE
+                About THINK TWICE
               </h2>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 Think Twice is a dynamic musical project that brings together powerful vocals, 
@@ -213,8 +225,8 @@ export default function Home() {
                     <span className="text-white text-2xl">🎸</span>
                   </div>
                   <div>
-                    <h3 className="font-black text-white text-xl">INSTRUMENTS</h3>
-                    <p className="text-red-400 text-sm font-bold">Guitar & Production</p>
+                    <h3 className="font-black text-white text-xl">GUITAR</h3>
+                    <p className="text-red-400 text-sm font-bold">XXXX</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -222,17 +234,17 @@ export default function Home() {
                     <span className="text-white text-2xl">🎵</span>
                   </div>
                   <div>
-                    <h3 className="font-black text-white text-xl">MUSIC</h3>
-                    <p className="text-red-400 text-sm font-bold">Original Compositions</p>
+                    <h3 className="font-black text-white text-xl">BASS</h3>
+                    <p className="text-red-400 text-sm font-bold">XXXX</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white text-2xl">🎬</span>
+                    <span className="text-white text-2xl">🥁</span>
                   </div>
                   <div>
-                    <h3 className="font-black text-white text-xl">CONTENT</h3>
-                    <p className="text-red-400 text-sm font-bold">Music Videos & Covers</p>
+                    <h3 className="font-black text-white text-xl">DRUMS</h3>
+                    <p className="text-red-400 text-sm font-bold">XXXX</p>
                   </div>
                 </div>
               </div>
