@@ -39,23 +39,29 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30 z-20"></div>
           
           {/* Band Photo 1 - Studio Shot */}
-          <div className="absolute top-0 left-0 w-1/3 h-full bg-cover bg-center opacity-20" 
+          <div className="absolute top-0 left-0 w-1/3 h-full bg-cover bg-center opacity-30" 
                style={{
-                 backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDQwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjMzMzIi8+Cjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CYW5kIFBob3RvIDE8L3RleHQ+Cjwvc3ZnPg==')`
+                 backgroundImage: `url('/images/band/studio-shot.jpg')`,
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center'
                }}>
           </div>
           
           {/* Band Photo 2 - Bass Player */}
-          <div className="absolute top-0 left-1/3 w-1/3 h-full bg-cover bg-center opacity-20" 
+          <div className="absolute top-0 left-1/3 w-1/3 h-full bg-cover bg-center opacity-30" 
                style={{
-                 backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDQwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjNjY2Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CYW5kIFBob3RvIDI8L3RleHQ+Cjwvc3ZnPg==')`
+                 backgroundImage: `url('/images/band/bass-player.jpg')`,
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center'
                }}>
           </div>
           
           {/* Band Photo 3 - Drummer */}
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-cover bg-center opacity-20" 
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-cover bg-center opacity-30" 
                style={{
-                 backgroundImage: `url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjYwMCIgdmlld0JveD0iMCAwIDQwMCA2MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNjAwIiBmaWxsPSIjOTk5Ii8+Cjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5CYW5kIFBob3RvIDM8L3RleHQ+Cjwvc3ZnPg==')`
+                 backgroundImage: `url('/images/band/drummer.jpg')`,
+                 backgroundSize: 'cover',
+                 backgroundPosition: 'center'
                }}>
           </div>
         </div>
