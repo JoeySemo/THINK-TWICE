@@ -112,8 +112,11 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="group">
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center opacity-60" 
-                     style={{backgroundImage: `url('/images/band/studio-shot.jpg')`}}>
+                <div className="absolute inset-0 bg-cover opacity-60" 
+                     style={{
+                       backgroundImage: `url('/images/band/studio-shot.jpg')`,
+                       backgroundPosition: 'center 20%'
+                     }}>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-600/40 via-red-600/40 to-purple-600/40"></div>
                 <div className="relative z-10">
