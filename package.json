@@ -1,10 +1,10 @@
 {
-  "name": "think-twice-band-website",
+  "name": "think-twice-florida-metalcore",
   "version": "1.0.0",
-  "description": "Official website for Think Twice band. Stream 'Recovery' and 'Time' on all major platforms. Follow @thinktwicefl on Instagram and TikTok.",
+  "description": "Official website for Think Twice - Florida Metalcore band. Stream 'Recovery' and 'Time' on all major platforms. Follow @thinktwicefl on Instagram and TikTok.",
   "private": true,
   "author": "Think Twice",
-  "keywords": ["think-twice", "band", "music", "recovery", "time", "thinktwicefl", "nextjs", "typescript", "tailwind"],
+  "keywords": ["think-twice", "florida-metalcore", "band", "music", "recovery", "time", "thinktwicefl", "florida", "metalcore", "nextjs", "typescript", "tailwind"],
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
