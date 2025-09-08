@@ -22,9 +22,6 @@ export default function Home() {
                 <a href="#about" className="text-gray-300 hover:text-red-500 px-3 py-2 text-sm font-bold transition-colors tracking-wide">
                   ABOUT
                 </a>
-                <a href="#contact" className="text-gray-300 hover:text-red-500 px-3 py-2 text-sm font-bold transition-colors tracking-wide">
-                  CONTACT
-                </a>
               </div>
             </div>
           </div>
@@ -98,10 +95,10 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="group">
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center opacity-30" 
+                <div className="absolute inset-0 bg-cover bg-center opacity-60" 
                      style={{backgroundImage: `url('/images/band/studio-shot.jpg')`}}>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-600/80 via-red-600/80 to-purple-600/80"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-pink-600/40 via-red-600/40 to-purple-600/40"></div>
                 <div className="relative z-10">
                   <h3 className="text-3xl font-black text-white mb-2 tracking-wide">INSTAGRAM</h3>
                   <p className="text-gray-200 font-bold">@thinktwicefl</p>
@@ -112,10 +109,10 @@ export default function Home() {
             
             <a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center opacity-30" 
+                <div className="absolute inset-0 bg-cover bg-center opacity-60" 
                      style={{backgroundImage: `url('/images/band/bass-player.jpg')`}}>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-gray-800/80 to-red-600/80"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-gray-800/40 to-red-600/40"></div>
                 <div className="relative z-10">
                   <h3 className="text-3xl font-black text-white mb-2 tracking-wide">TIKTOK</h3>
                   <p className="text-gray-200 font-bold">@thinktwicefl</p>
@@ -126,10 +123,10 @@ export default function Home() {
             
             <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center opacity-30" 
+                <div className="absolute inset-0 bg-cover bg-center opacity-60" 
                      style={{backgroundImage: `url('/images/band/drummer.jpg')`}}>
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-br from-green-600/80 via-red-600/80 to-blue-600/80"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-green-600/40 via-red-600/40 to-blue-600/40"></div>
                 <div className="relative z-10">
                   <h3 className="text-3xl font-black text-white mb-2 tracking-wide">LINKTREE</h3>
                   <p className="text-gray-200 font-bold">All Links</p>
@@ -283,49 +280,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight">
-              CONTACT
-            </h2>
-            <p className="text-2xl text-red-400 font-bold">
-              Connect with Think Twice
-            </p>
-          </div>
-          
-          <div className="max-w-2xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg text-center hover:border-red-600 border border-gray-800 transition-colors group">
-                <div className="text-4xl mb-3">📸</div>
-                <h3 className="text-2xl font-black text-white mb-2">Instagram</h3>
-                <p className="text-red-400 font-bold">@thinktwicefl</p>
-                <p className="text-gray-400 text-sm mt-2">Behind the scenes content</p>
-              </a>
-              
-              <a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-lg text-center hover:border-red-600 border border-gray-800 transition-colors group">
-                <div className="text-4xl mb-3">🎵</div>
-                <h3 className="text-2xl font-black text-white mb-2">TikTok</h3>
-                <p className="text-red-400 font-bold">@thinktwicefl</p>
-                <p className="text-gray-400 text-sm mt-2">Short form content</p>
-              </a>
-            </div>
-            
-            <div className="text-center">
-              <p className="text-gray-400 mb-4 font-bold">For booking and business inquiries:</p>
-              <a href="mailto:contact@thinktwice.com" className="text-red-400 hover:text-red-300 transition-colors font-bold">
-                contact@thinktwice.com
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Footer */}
       <footer className="bg-black text-white py-12 border-t border-red-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
               <h3 className="text-3xl font-black mb-4 tracking-wider">THINK TWICE</h3>
               <p className="text-gray-400 font-bold">
@@ -346,14 +305,6 @@ export default function Home() {
                 <li><a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Instagram</a></li>
                 <li><a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">TikTok</a></li>
                 <li><a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Linktree</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-black mb-4 text-red-400">CONTACT</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="mailto:contact@thinktwice.com" className="hover:text-red-400 transition-colors font-bold">Email</a></li>
-                <li><a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Booking</a></li>
-                <li><a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="hover:text-red-400 transition-colors font-bold">Press</a></li>
               </ul>
             </div>
           </div>
