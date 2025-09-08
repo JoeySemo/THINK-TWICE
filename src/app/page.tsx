@@ -7,7 +7,6 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <h1 className="text-3xl font-bold text-white tracking-wider">THINK TWICE</h1>
-              <span className="ml-3 text-red-500 text-sm font-bold">FL</span>
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-8">
@@ -37,11 +36,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-red-900/20 to-black/50"></div>
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="mb-8">
-              <span className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold tracking-wider">
-                FLORIDA METALCORE
-              </span>
-            </div>
             <h1 className="text-7xl md:text-9xl font-black text-white mb-6 tracking-tight">
               THINK TWICE
             </h1>
@@ -60,78 +54,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Release */}
-      <section id="music" className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-tight">
-              LATEST RELEASE
-            </h2>
-            <p className="text-2xl text-red-400 font-bold">
-              Recovery - Available Now
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-lg border border-red-600">
-              <div className="aspect-square bg-gradient-to-br from-red-600 via-black to-red-800 rounded-lg mb-6 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-black/50"></div>
-                <div className="text-center relative z-10">
-                  <h3 className="text-4xl font-black text-white mb-2 tracking-wider">RECOVERY</h3>
-                  <p className="text-red-400 font-bold tracking-wide">THINK TWICE</p>
-                  <p className="text-gray-300 text-sm mt-2">FLORIDA METALCORE</p>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <a href="https://open.spotify.com/artist/thinktwice" target="_blank" rel="noopener noreferrer" className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                  <span className="mr-2">🎵</span> STREAM ON SPOTIFY
-                </a>
-                <a href="https://music.apple.com/us/artist/think-twice" target="_blank" rel="noopener noreferrer" className="w-full border border-red-600 text-red-400 font-bold py-3 px-6 rounded-lg hover:bg-red-600 hover:text-white transition-colors flex items-center justify-center">
-                  <span className="mr-2">🍎</span> STREAM ON APPLE MUSIC
-                </a>
-                <a href="https://www.youtube.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="w-full border border-red-600 text-red-400 font-bold py-3 px-6 rounded-lg hover:bg-red-600 hover:text-white transition-colors flex items-center justify-center">
-                  <span className="mr-2">📺</span> WATCH ON YOUTUBE
-                </a>
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="text-4xl font-black text-white mb-6 tracking-wide">STREAMING PLATFORMS</h3>
-              <div className="space-y-4">
-                <a href="https://open.spotify.com/artist/thinktwice" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-gray-900 rounded-lg border border-gray-800 hover:border-red-600 transition-colors group">
-                  <div className="flex items-center">
-                    <span className="text-2xl mr-3">🎵</span>
-                    <span className="text-white font-bold">Spotify</span>
-                  </div>
-                  <span className="text-red-400 group-hover:text-red-300 transition-colors">→</span>
-                </a>
-                <a href="https://music.apple.com/us/artist/think-twice" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-gray-900 rounded-lg border border-gray-800 hover:border-red-600 transition-colors group">
-                  <div className="flex items-center">
-                    <span className="text-2xl mr-3">🍎</span>
-                    <span className="text-white font-bold">Apple Music</span>
-                  </div>
-                  <span className="text-red-400 group-hover:text-red-300 transition-colors">→</span>
-                </a>
-                <a href="https://www.youtube.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-gray-900 rounded-lg border border-gray-800 hover:border-red-600 transition-colors group">
-                  <div className="flex items-center">
-                    <span className="text-2xl mr-3">📺</span>
-                    <span className="text-white font-bold">YouTube Music</span>
-                  </div>
-                  <span className="text-red-400 group-hover:text-red-300 transition-colors">→</span>
-                </a>
-                <a href="https://music.amazon.com/artists/think-twice" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-gray-900 rounded-lg border border-gray-800 hover:border-red-600 transition-colors group">
-                  <div className="flex items-center">
-                    <span className="text-2xl mr-3">🛒</span>
-                    <span className="text-white font-bold">Amazon Music</span>
-                  </div>
-                  <span className="text-red-400 group-hover:text-red-300 transition-colors">→</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Social Media */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -140,7 +62,7 @@ export default function Home() {
               FOLLOW THE MOVEMENT
             </h2>
             <p className="text-2xl text-red-400 font-bold">
-              Join the Florida Metalcore Scene
+              Join the Think Twice Community
             </p>
           </div>
           
@@ -183,29 +105,16 @@ export default function Home() {
               <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight">
                 ABOUT THINK TWICE
               </h2>
-              <div className="mb-6">
-                <span className="bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold tracking-wider">
-                  FLORIDA METALCORE
-                </span>
-              </div>
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                Think Twice is a dynamic Florida-based metalcore project that brings together powerful vocals, 
+                Think Twice is a dynamic musical project that brings together powerful vocals, 
                 innovative production, and meaningful lyrics. With their latest release &ldquo;Recovery,&rdquo; 
                 the band continues to push boundaries and connect with audiences worldwide.
               </p>
               <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                Born from the Florida metalcore scene, Think Twice delivers authentic music that resonates with listeners. 
+                Born from the music scene, Think Twice delivers authentic music that resonates with listeners. 
                 From intimate acoustic sessions to full production tracks, they represent the next generation of 
-                Florida metalcore talent.
+                musical talent.
               </p>
-              <div className="flex space-x-4">
-                <a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
-                  FOLLOW ON IG
-                </a>
-                <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="border border-red-600 text-red-400 font-bold py-3 px-6 rounded-lg hover:bg-red-600 hover:text-white transition-colors">
-                  ALL LINKS
-                </a>
-              </div>
             </div>
             <div className="bg-gradient-to-br from-gray-900 to-black p-8 rounded-lg border border-red-600">
               <div className="space-y-6">
@@ -215,7 +124,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-black text-white text-xl">VOCALS</h3>
-                    <p className="text-red-400 text-sm font-bold">Lead & Harmony</p>
+                    <p className="text-red-400 text-sm font-bold">Jackson Savage</p>
                   </div>
                 </div>
                 <div className="flex items-center">
@@ -233,16 +142,16 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-black text-white text-xl">MUSIC</h3>
-                    <p className="text-red-400 text-sm font-bold">Original Metalcore</p>
+                    <p className="text-red-400 text-sm font-bold">Original Compositions</p>
                   </div>
                 </div>
                 <div className="flex items-center">
                   <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white text-2xl">🌴</span>
+                    <span className="text-white text-2xl">🎬</span>
                   </div>
                   <div>
-                    <h3 className="font-black text-white text-xl">LOCATION</h3>
-                    <p className="text-red-400 text-sm font-bold">Florida, USA</p>
+                    <h3 className="font-black text-white text-xl">CONTENT</h3>
+                    <p className="text-red-400 text-sm font-bold">Music Videos & Covers</p>
                   </div>
                 </div>
               </div>
@@ -259,7 +168,7 @@ export default function Home() {
               TOUR DATES
             </h2>
             <p className="text-2xl text-red-400 font-bold">
-              Florida Metalcore Live
+              Live Performances
             </p>
           </div>
           
@@ -268,7 +177,7 @@ export default function Home() {
               <div className="bg-gradient-to-r from-gray-900 to-black p-6 rounded-lg border border-red-600">
                 <div className="flex justify-between items-center">
                   <div>
-                    <h3 className="text-2xl font-black text-white">More Florida dates coming soon...</h3>
+                    <h3 className="text-2xl font-black text-white">More dates coming soon...</h3>
                     <p className="text-red-400 font-bold">Stay tuned for upcoming shows</p>
                   </div>
                   <a href="https://www.instagram.com/thinktwicefl/" target="_blank" rel="noopener noreferrer" className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-lg transition-colors">
@@ -289,7 +198,7 @@ export default function Home() {
               MERCHANDISE
             </h2>
             <p className="text-2xl text-red-400 font-bold">
-              Florida Metalcore Gear
+              Official Think Twice Gear
             </p>
           </div>
           
@@ -376,7 +285,7 @@ export default function Home() {
             <div>
               <h3 className="text-3xl font-black mb-4 tracking-wider">THINK TWICE</h3>
               <p className="text-gray-400 font-bold">
-                Florida Metalcore
+                Official Band Website
               </p>
             </div>
             <div>
@@ -405,7 +314,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-red-600 mt-8 pt-8 text-center text-gray-400">
-            <p className="font-bold">&copy; 2024 Think Twice. All rights reserved. | Florida Metalcore</p>
+            <p className="font-bold">&copy; 2024 Think Twice. All rights reserved.</p>
           </div>
         </div>
       </footer>

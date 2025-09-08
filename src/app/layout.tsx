@@ -13,13 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Think Twice - Florida Metalcore Band",
-  description: "Official website for Think Twice - Florida Metalcore band. Stream 'Recovery' and 'Time' on all major platforms. Follow @thinktwicefl on Instagram and TikTok.",
-  keywords: ["think twice", "florida metalcore", "band", "music", "recovery", "time", "thinktwicefl", "instagram", "tiktok", "florida", "metalcore"],
+  title: "Think Twice - Official Band Website",
+  description: "Official website for Think Twice band. Stream 'Recovery' and 'Time' on all major platforms. Follow @thinktwicefl on Instagram and TikTok.",
+  keywords: ["think twice", "band", "music", "recovery", "time", "thinktwicefl", "instagram", "tiktok", "jackson savage"],
   authors: [{ name: "Think Twice" }],
   openGraph: {
-    title: "Think Twice - Florida Metalcore Band",
-    description: "Official website for Think Twice - Florida Metalcore band. Stream 'Recovery' and 'Time' on all major platforms.",
+    title: "Think Twice - Official Band Website",
+    description: "Official website for Think Twice band. Stream 'Recovery' and 'Time' on all major platforms.",
     type: "website",
   },
 };
