@@ -30,31 +30,13 @@ export default function Home() {
 
       {/* Hero Section with Band Photos Background */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden min-h-screen flex items-center">
-        {/* Background Images */}
+        {/* Background Image */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 to-black/60 z-10"></div>
           <div className="absolute inset-0 bg-black/30 z-20"></div>
           
-          {/* Band Photo 1 - Studio Shot */}
-          <div className="absolute top-0 left-0 w-1/3 h-full bg-cover bg-center opacity-30" 
-               style={{
-                 backgroundImage: `url('/images/band/studio-shot.jpg')`,
-                 backgroundSize: 'cover',
-                 backgroundPosition: 'center'
-               }}>
-          </div>
-          
-          {/* Band Photo 2 - Bass Player */}
-          <div className="absolute top-0 left-1/3 w-1/3 h-full bg-cover bg-center opacity-30" 
-               style={{
-                 backgroundImage: `url('/images/band/bass-player.jpg')`,
-                 backgroundSize: 'cover',
-                 backgroundPosition: 'center'
-               }}>
-          </div>
-          
-          {/* Band Photo 3 - Drummer */}
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-cover bg-center opacity-30" 
+          {/* Single Drummer Photo Background */}
+          <div className="absolute inset-0 bg-cover bg-center opacity-30" 
                style={{
                  backgroundImage: `url('/images/band/drummer.jpg')`,
                  backgroundSize: 'cover',
@@ -114,7 +96,7 @@ export default function Home() {
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
                 <div className="absolute inset-0 bg-cover opacity-60" 
                      style={{
-                       backgroundImage: `url('/images/band/studio-shot.jpg')`,
+                       backgroundImage: `url('/images/band/full-band.jpg')`,
                        backgroundPosition: 'center 20%'
                      }}>
                 </div>
@@ -144,7 +126,7 @@ export default function Home() {
             <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
                 <div className="absolute inset-0 bg-cover bg-center opacity-60" 
-                     style={{backgroundImage: `url('/images/band/drummer.jpg')`}}>
+                     style={{backgroundImage: `url('/images/band/singer.jpg')`}}>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-green-600/40 via-red-600/40 to-blue-600/40"></div>
                 <div className="relative z-10">
