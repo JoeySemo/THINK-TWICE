@@ -35,10 +35,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 to-black/60 z-10"></div>
           <div className="absolute inset-0 bg-black/30 z-20"></div>
           
-          {/* Single Full Band Photo Background */}
+          {/* Single Bass Player Photo Background */}
           <div className="absolute inset-0 bg-cover bg-center opacity-30" 
                style={{
-                 backgroundImage: `url('/images/band/full-band.jpg')`,
+                 backgroundImage: `url('/images/band/bass-player.jpg')`,
                  backgroundSize: 'cover',
                  backgroundPosition: 'center'
                }}>
@@ -97,7 +97,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-cover opacity-60" 
                      style={{
                        backgroundImage: `url('/images/band/full-band.jpg')`,
-                       backgroundPosition: 'center 20%'
+                       backgroundPosition: 'center center'
                      }}>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-pink-600/40 via-red-600/40 to-purple-600/40"></div>
@@ -112,7 +112,7 @@ export default function Home() {
             <a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
                 <div className="absolute inset-0 bg-cover bg-center opacity-60" 
-                     style={{backgroundImage: `url('/images/band/bass-player.jpg')`}}>
+                     style={{backgroundImage: `url('/images/band/drummer.jpg')`}}>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-gray-800/40 to-red-600/40"></div>
                 <div className="relative z-10">
@@ -125,8 +125,11 @@ export default function Home() {
             
             <a href="https://linktr.ee/thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
-                <div className="absolute inset-0 bg-cover bg-center opacity-60" 
-                     style={{backgroundImage: `url('/images/band/singer.jpg')`}}>
+                <div className="absolute inset-0 bg-cover opacity-60" 
+                     style={{
+                       backgroundImage: `url('/images/band/singer.jpg')`,
+                       backgroundPosition: 'center center'
+                     }}>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-green-600/40 via-red-600/40 to-blue-600/40"></div>
                 <div className="relative z-10">
