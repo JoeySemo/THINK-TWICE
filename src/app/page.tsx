@@ -35,10 +35,10 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 to-black/60 z-10"></div>
           <div className="absolute inset-0 bg-black/30 z-20"></div>
           
-          {/* Single Drummer Photo Background */}
+          {/* Single Full Band Photo Background */}
           <div className="absolute inset-0 bg-cover bg-center opacity-30" 
                style={{
-                 backgroundImage: `url('/images/band/drummer.jpg')`,
+                 backgroundImage: `url('/images/band/full-band.jpg')`,
                  backgroundSize: 'cover',
                  backgroundPosition: 'center'
                }}>
