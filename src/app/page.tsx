@@ -36,11 +36,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/30 z-20"></div>
           
           {/* Single Bass Player Photo Background */}
-          <div className="absolute inset-0 bg-cover bg-center opacity-30" 
+          <div className="absolute inset-0 bg-cover bg-center opacity-50" 
                style={{
                  backgroundImage: `url('/images/band/bass-player.jpg')`,
                  backgroundSize: 'cover',
-                 backgroundPosition: 'center'
+                 backgroundPosition: 'center 30%'
                }}>
           </div>
         </div>
@@ -112,7 +112,10 @@ export default function Home() {
             <a href="https://www.tiktok.com/@thinktwicefl" target="_blank" rel="noopener noreferrer" className="group">
               <div className="relative p-8 rounded-lg text-center hover:scale-105 transition-transform border border-red-600 overflow-hidden">
                 <div className="absolute inset-0 bg-cover bg-center opacity-60" 
-                     style={{backgroundImage: `url('/images/band/drummer.jpg')`}}>
+                     style={{
+                       backgroundImage: `url('/images/band/drummer.jpg')`,
+                       backgroundPosition: 'center 40%'
+                     }}>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-gray-800/40 to-red-600/40"></div>
                 <div className="relative z-10">
